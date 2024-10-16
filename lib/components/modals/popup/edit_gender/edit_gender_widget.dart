@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'edit_gender_model.dart';
 export 'edit_gender_model.dart';
 
@@ -38,12 +40,12 @@ class _EditGenderWidgetState extends State<EditGenderWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: 300.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground2,
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x33000000),
@@ -57,13 +59,13 @@ class _EditGenderWidgetState extends State<EditGenderWidget> {
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(20.0),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                 child: Text(
                   'Gender',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -89,7 +91,7 @@ class _EditGenderWidgetState extends State<EditGenderWidget> {
                       letterSpacing: 0.0,
                     ),
                 textPadding:
-                    const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
+                    EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 0.0, 0.0),
                 buttonPosition: RadioButtonPosition.left,
                 direction: Axis.vertical,
                 radioButtonColor: FlutterFlowTheme.of(context).primary,
@@ -140,9 +142,9 @@ class _EditGenderWidgetState extends State<EditGenderWidget> {
                           ),
                     ),
                   ),
-                ].divide(const SizedBox(width: 24.0)),
+                ].divide(SizedBox(width: 24.0)),
               ),
-            ].divide(const SizedBox(height: 12.0)),
+            ].divide(SizedBox(height: 12.0)),
           ),
         ),
       ),

@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'fetcher_model.dart';
 export 'fetcher_model.dart';
 
@@ -41,7 +43,7 @@ class _FetcherWidgetState extends State<FetcherWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
@@ -53,7 +55,7 @@ class _FetcherWidgetState extends State<FetcherWidget> {
               shape: BoxShape.circle,
             ),
             child: Align(
-              alignment: const AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.0, 0.0),
               child: Icon(
                 FFIcons.kcheck,
                 color: FlutterFlowTheme.of(context).primaryText,
@@ -63,7 +65,7 @@ class _FetcherWidgetState extends State<FetcherWidget> {
           ),
           Text(
             valueOrDefault<String>(
-              widget.title,
+              widget!.title,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -71,7 +73,7 @@ class _FetcherWidgetState extends State<FetcherWidget> {
                   letterSpacing: 0.0,
                 ),
           ),
-        ].divide(const SizedBox(width: 12.0)),
+        ].divide(SizedBox(width: 12.0)),
       ),
     );
   }

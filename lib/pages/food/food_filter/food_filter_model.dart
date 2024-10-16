@@ -1,9 +1,13 @@
 import '/components/custom_button/custom_button_widget.dart';
 import '/components/custom_switch/custom_switch_widget.dart';
 import '/components/filter_tag/filter_tag_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'food_filter_widget.dart' show FoodFilterWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class FoodFilterModel extends FlutterFlowModel<FoodFilterWidget> {
   ///  Local state fields for this page.

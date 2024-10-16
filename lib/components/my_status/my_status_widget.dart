@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'my_status_model.dart';
 export 'my_status_model.dart';
 
@@ -56,10 +58,10 @@ class _MyStatusWidgetState extends State<MyStatusWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
             child: Text(
               valueOrDefault<String>(
-                widget.value,
+                widget!.value,
                 'nna',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -75,10 +77,10 @@ class _MyStatusWidgetState extends State<MyStatusWidget> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              widget.icon!,
+              widget!.icon!,
               Text(
                 valueOrDefault<String>(
-                  widget.title,
+                  widget!.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -88,9 +90,9 @@ class _MyStatusWidgetState extends State<MyStatusWidget> {
                       letterSpacing: 0.0,
                     ),
               ),
-            ].divide(const SizedBox(width: 4.0)),
+            ].divide(SizedBox(width: 4.0)),
           ),
-        ].divide(const SizedBox(height: 8.0)),
+        ].divide(SizedBox(height: 8.0)),
       ),
     );
   }

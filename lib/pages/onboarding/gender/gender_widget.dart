@@ -1,9 +1,12 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:provider/provider.dart';
 import 'gender_model.dart';
@@ -35,7 +38,7 @@ class _GenderWidgetState extends State<GenderWidget>
         context.pushNamed(
           'SignIn',
           extra: <String, dynamic>{
-            kTransitionInfoKey: const TransitionInfo(
+            kTransitionInfoKey: TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.fade,
             ),
@@ -54,8 +57,8 @@ class _GenderWidgetState extends State<GenderWidget>
             curve: Curves.easeInOutQuint,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-240.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-240.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -73,8 +76,8 @@ class _GenderWidgetState extends State<GenderWidget>
             curve: Curves.easeInOutQuint,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -92,8 +95,8 @@ class _GenderWidgetState extends State<GenderWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -111,8 +114,8 @@ class _GenderWidgetState extends State<GenderWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -130,8 +133,8 @@ class _GenderWidgetState extends State<GenderWidget>
             curve: Curves.easeInOut,
             delay: 500.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -149,8 +152,8 @@ class _GenderWidgetState extends State<GenderWidget>
             curve: Curves.easeInOut,
             delay: 600.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -183,7 +186,7 @@ class _GenderWidgetState extends State<GenderWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,7 +207,7 @@ class _GenderWidgetState extends State<GenderWidget>
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -230,13 +233,13 @@ class _GenderWidgetState extends State<GenderWidget>
                             ),
                       ).animateOnPageLoad(
                           animationsMap['textOnPageLoadAnimation2']!),
-                    ].divide(const SizedBox(height: 6.0)),
+                    ].divide(SizedBox(height: 6.0)),
                   ),
                 ),
                 Expanded(
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                     child: SingleChildScrollView(
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
@@ -255,7 +258,7 @@ class _GenderWidgetState extends State<GenderWidget>
                               context.pushNamed(
                                 'F_YourName',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -287,7 +290,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -307,11 +310,11 @@ class _GenderWidgetState extends State<GenderWidget>
                                       ),
                                       Stack(
                                         alignment:
-                                            const AlignmentDirectional(1.0, 0.0),
+                                            AlignmentDirectional(1.0, 0.0),
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 1.0, 0.0, 1.0),
                                             child: Image.network(
                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/nf2m5etdwgx6/s2.png',
@@ -321,7 +324,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                           ),
                                           if (_model.selectedGender == 'Female')
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 8.0, 0.0),
                                               child: Container(
                                                 width: 24.0,
@@ -334,7 +337,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Icon(
                                                     FFIcons.kcheck,
@@ -369,7 +372,7 @@ class _GenderWidgetState extends State<GenderWidget>
                               context.pushNamed(
                                 'M_YourName',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -401,7 +404,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -421,11 +424,11 @@ class _GenderWidgetState extends State<GenderWidget>
                                       ),
                                       Stack(
                                         alignment:
-                                            const AlignmentDirectional(1.0, 0.0),
+                                            AlignmentDirectional(1.0, 0.0),
                                         children: [
                                           Padding(
                                             padding:
-                                                const EdgeInsetsDirectional.fromSTEB(
+                                                EdgeInsetsDirectional.fromSTEB(
                                                     0.0, 1.0, 0.0, 1.0),
                                             child: Image.network(
                                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qgs6dqjrw5np/s1.png',
@@ -435,7 +438,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                           ),
                                           if (_model.selectedGender == 'Male')
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 8.0, 0.0),
                                               child: Container(
                                                 width: 24.0,
@@ -448,7 +451,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Icon(
                                                     FFIcons.kcheck,
@@ -483,7 +486,7 @@ class _GenderWidgetState extends State<GenderWidget>
                               context.pushNamed(
                                 'F_YourGoal',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -515,7 +518,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -534,7 +537,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                             ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 8.0, 0.0),
                                         child: Container(
                                           width: 24.0,
@@ -554,7 +557,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Icon(
                                               FFIcons.kcheck,
                                               color:
@@ -586,7 +589,7 @@ class _GenderWidgetState extends State<GenderWidget>
                               context.pushNamed(
                                 'F_YourGoal',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -619,7 +622,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       12.0, 0.0, 12.0, 0.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
@@ -638,7 +641,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                             ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsetsDirectional.fromSTEB(
+                                        padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 8.0, 0.0),
                                         child: Container(
                                           width: 24.0,
@@ -658,7 +661,7 @@ class _GenderWidgetState extends State<GenderWidget>
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Icon(
                                               FFIcons.kcheck,
                                               color:
@@ -676,14 +679,14 @@ class _GenderWidgetState extends State<GenderWidget>
                             ),
                           ).animateOnPageLoad(
                               animationsMap['containerOnPageLoadAnimation4']!),
-                        ].divide(const SizedBox(height: 8.0)),
+                        ].divide(SizedBox(height: 8.0)),
                       ),
                     ),
                   ),
                 ),
               ]
-                  .addToStart(const SizedBox(height: 24.0))
-                  .addToEnd(const SizedBox(height: 24.0)),
+                  .addToStart(SizedBox(height: 24.0))
+                  .addToEnd(SizedBox(height: 24.0)),
             ),
           ),
         ),

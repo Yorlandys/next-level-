@@ -2,7 +2,10 @@ import '/components/category/category_widget.dart';
 import '/components/food_card3/food_card3_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'view_all_model.dart';
 export 'view_all_model.dart';
 
@@ -52,13 +55,13 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 8.0),
                             child: InkWell(
                               splashColor: Colors.transparent,
@@ -69,7 +72,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 context.pushNamed(
                                   'SearchFood',
                                   extra: <String, dynamic>{
-                                    kTransitionInfoKey: const TransitionInfo(
+                                    kTransitionInfoKey: TransitionInfo(
                                       hasTransition: true,
                                       transitionType:
                                           PageTransitionType.leftToRight,
@@ -99,7 +102,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model1,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/q2i6ggmzoaw4/f1.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -108,7 +111,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -117,7 +120,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model2,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/msxoe4spoo9c/f14.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -130,7 +133,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model3,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qzd8rtkxnjnp/f13.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -139,7 +142,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -148,7 +151,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model4,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5pw96yyc36e2/f11.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -161,7 +164,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model5,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gxci59slamhc/f9.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -170,7 +173,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -179,7 +182,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model6,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/t5938uuordvf/f3.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -192,7 +195,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model7,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/bmtafktfmts2/f4.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -201,7 +204,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -210,7 +213,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model8,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/2vknrbx1t5l2/f7.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -223,7 +226,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                 child: wrapWithModel(
                                   model: _model.foodCard3Model9,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const FoodCard3Widget(
+                                  child: FoodCard3Widget(
                                     cover:
                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/ove4yfnh14l0/f5.jpg',
                                     title: 'Grilled Checken with Vegetables',
@@ -232,14 +235,14 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(width: 16.0)),
+                            ].divide(SizedBox(width: 16.0)),
                           ),
-                        ].divide(const SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(height: 100.0))
-                      .addToEnd(const SizedBox(height: 32.0)),
+                      .addToStart(SizedBox(height: 100.0))
+                      .addToEnd(SizedBox(height: 32.0)),
                 ),
               ),
               Container(
@@ -250,7 +253,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                     BoxShadow(
                       blurRadius: 8.0,
                       color: FlutterFlowTheme.of(context).primaryBackground2,
-                      offset: const Offset(
+                      offset: Offset(
                         0.0,
                         2.0,
                       ),
@@ -259,7 +262,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -278,12 +281,12 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kchevronLeft,
                                   color: FlutterFlowTheme.of(context).info,
@@ -313,7 +316,7 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                               context.pushNamed(
                                 'FoodFilter',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -325,12 +328,12 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kfilter,
                                   color: FlutterFlowTheme.of(context).info,
@@ -375,8 +378,8 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                               errorBorder: InputBorder.none,
                               focusedErrorBorder: InputBorder.none,
                               filled: true,
-                              fillColor: const Color(0xFF052146),
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                              fillColor: Color(0xFF052146),
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 12.0, 12.0, 12.0),
                               prefixIcon: Icon(
                                 FFIcons.ksearch,
@@ -397,8 +400,8 @@ class _ViewAllWidgetState extends State<ViewAllWidget> {
                         ),
                       ),
                     ]
-                        .divide(const SizedBox(height: 20.0))
-                        .addToEnd(const SizedBox(height: 6.0)),
+                        .divide(SizedBox(height: 20.0))
+                        .addToEnd(SizedBox(height: 6.0)),
                   ),
                 ),
               ),

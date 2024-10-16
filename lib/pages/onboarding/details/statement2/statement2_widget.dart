@@ -1,9 +1,14 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'statement2_model.dart';
 export 'statement2_model.dart';
 
@@ -35,8 +40,8 @@ class _Statement2WidgetState extends State<Statement2Widget>
             curve: Curves.easeInOutQuint,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -54,8 +59,8 @@ class _Statement2WidgetState extends State<Statement2Widget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -73,8 +78,8 @@ class _Statement2WidgetState extends State<Statement2Widget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -92,8 +97,8 @@ class _Statement2WidgetState extends State<Statement2Widget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -124,7 +129,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,7 +154,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                           shape: BoxShape.circle,
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Icon(
                             FFIcons.kchevronLeft,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -170,7 +175,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -186,16 +191,16 @@ class _Statement2WidgetState extends State<Statement2Widget>
                             ),
                       ).animateOnPageLoad(
                           animationsMap['textOnPageLoadAnimation']!),
-                    ].divide(const SizedBox(height: 6.0)),
+                    ].divide(SizedBox(height: 6.0)),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Padding(
-                        padding: const EdgeInsetsDirectional.fromSTEB(
+                        padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 16.0, 0.0, 32.0),
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16.0),
@@ -208,7 +213,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                               borderRadius: BorderRadius.circular(16.0),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 12.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -248,7 +253,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                           context.pushNamed(
                             'Pushups',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
                                 duration: Duration(milliseconds: 200),
@@ -278,7 +283,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -298,7 +303,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                                   ),
                                   if (_model.gender == 'Male')
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         width: 24.0,
@@ -310,7 +315,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kcheck,
                                             color: FlutterFlowTheme.of(context)
@@ -341,7 +346,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                           context.pushNamed(
                             'Pushups',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
                                 duration: Duration(milliseconds: 200),
@@ -371,7 +376,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -391,7 +396,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                                   ),
                                   if (_model.gender == 'Flabby')
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         width: 24.0,
@@ -403,7 +408,7 @@ class _Statement2WidgetState extends State<Statement2Widget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kcheck,
                                             color: FlutterFlowTheme.of(context)
@@ -420,12 +425,12 @@ class _Statement2WidgetState extends State<Statement2Widget>
                         ),
                       ).animateOnPageLoad(
                           animationsMap['containerOnPageLoadAnimation3']!),
-                    ].divide(const SizedBox(height: 8.0)),
+                    ].divide(SizedBox(height: 8.0)),
                   ),
                 ),
               ]
-                  .addToStart(const SizedBox(height: 24.0))
-                  .addToEnd(const SizedBox(height: 24.0)),
+                  .addToStart(SizedBox(height: 24.0))
+                  .addToEnd(SizedBox(height: 24.0)),
             ),
           ),
         ),

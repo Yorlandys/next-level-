@@ -3,8 +3,11 @@ import '/components/rest/rest_widget.dart';
 import '/components/workout/workout_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'view_list_model.dart';
 export 'view_list_model.dart';
 
@@ -54,13 +57,13 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                   children: [
                     Container(
                       height: 260.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: Stack(
                         children: [
                           ClipRRect(
                             child: Container(
                               height: 420.0,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -82,7 +85,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                           blurRadius: 40.0,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBackground2,
-                                          offset: const Offset(
+                                          offset: Offset(
                                             0.0,
                                             2.0,
                                           ),
@@ -96,9 +99,9 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 1.0),
+                            alignment: AlignmentDirectional(0.0, 1.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 16.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
@@ -164,9 +167,9 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                           title: '94 calories',
                                         ),
                                       ),
-                                    ].divide(const SizedBox(width: 16.0)),
+                                    ].divide(SizedBox(width: 16.0)),
                                   ),
-                                ].divide(const SizedBox(height: 16.0)),
+                                ].divide(SizedBox(height: 16.0)),
                               ),
                             ),
                           ),
@@ -175,7 +178,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,7 +205,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                     Expanded(
                                       child: Container(
                                         width: double.infinity,
-                                        color: const Color(0x00000000),
+                                        color: Color(0x00000000),
                                         child: ExpandableNotifier(
                                           controller: _model
                                               .expandableExpandableController,
@@ -276,9 +279,9 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                               ),
                                                     ),
                                                   ].divide(
-                                                      const SizedBox(height: 4.0)),
+                                                      SizedBox(height: 4.0)),
                                                 ),
-                                              ].divide(const SizedBox(width: 12.0)),
+                                              ].divide(SizedBox(width: 12.0)),
                                             ),
                                             collapsed: Container(
                                               width: 0.0,
@@ -296,7 +299,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                   model: _model.workoutModel1,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: const WorkoutWidget(
+                                                  child: WorkoutWidget(
                                                     cover:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/hg4pkd2vdv1g/v31.gif',
                                                     title: 'Side Plank',
@@ -307,7 +310,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                   model: _model.workoutModel2,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: const WorkoutWidget(
+                                                  child: WorkoutWidget(
                                                     cover:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/yc6k0s432hsw/v30.gif',
                                                     title: 'Side Plank',
@@ -318,7 +321,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                   model: _model.workoutModel3,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: const WorkoutWidget(
+                                                  child: WorkoutWidget(
                                                     cover:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/3e8dbzzfwvoh/v28.gif',
                                                     title: 'Side Plank',
@@ -329,7 +332,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                   model: _model.workoutModel4,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: const WorkoutWidget(
+                                                  child: WorkoutWidget(
                                                     cover:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/hz06krydfcpr/v29.gif',
                                                     title: 'Side Plank',
@@ -340,7 +343,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                   model: _model.workoutModel5,
                                                   updateCallback: () =>
                                                       safeSetState(() {}),
-                                                  child: const WorkoutWidget(
+                                                  child: WorkoutWidget(
                                                     cover:
                                                         'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/ldbqwmi5a10m/v27.gif',
                                                     title: 'Side Plank',
@@ -349,9 +352,9 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                 ),
                                               ]
                                                   .divide(
-                                                      const SizedBox(height: 16.0))
+                                                      SizedBox(height: 16.0))
                                                   .addToStart(
-                                                      const SizedBox(height: 16.0)),
+                                                      SizedBox(height: 16.0)),
                                             ),
                                             theme: ExpandableThemeData(
                                               tapHeaderToExpand: true,
@@ -375,21 +378,21 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                   ],
                                 ),
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 4.0, 0.0, 4.0),
                                   child: wrapWithModel(
                                     model: _model.restModel1,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const RestWidget(),
+                                    child: RestWidget(),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Stack(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
+                                alignment: AlignmentDirectional(1.0, 0.0),
                                 children: [
                                   InkWell(
                                     splashColor: Colors.transparent,
@@ -400,7 +403,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                       context.pushNamed(
                                         'Instructions',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -411,7 +414,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                       );
                                     },
                                     child: Container(
-                                      decoration: const BoxDecoration(),
+                                      decoration: BoxDecoration(),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
@@ -463,7 +466,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                 ),
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Text(
                                                     '40 s',
@@ -481,14 +484,14 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                                   ),
                                                 ),
                                               ),
-                                            ].divide(const SizedBox(height: 4.0)),
+                                            ].divide(SizedBox(height: 4.0)),
                                           ),
-                                        ].divide(const SizedBox(width: 12.0)),
+                                        ].divide(SizedBox(width: 12.0)),
                                       ),
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 12.0, 0.0),
                                     child: Icon(
                                       FFIcons.kplayerPlay,
@@ -502,7 +505,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel6,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/jjbo5c849y61/v18.gif',
                                   title: 'Leg Lifts',
@@ -512,7 +515,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel7,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/y50dq8n9zrvp/v12.gif',
                                   title: 'Teaser',
@@ -520,18 +523,18 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 4.0),
                                 child: wrapWithModel(
                                   model: _model.restModel2,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const RestWidget(),
+                                  child: RestWidget(),
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.workoutModel8,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/3g0husa4p72n/v15.gif',
                                   title: 'March & Clap',
@@ -541,7 +544,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel9,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/m88otul11ox1/v11.gif',
                                   title: 'Seated Core Twist',
@@ -551,7 +554,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel10,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/fmaasga13xr8/v3.gif',
                                   title: 'Dynamic Rollups',
@@ -559,18 +562,18 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 4.0),
                                 child: wrapWithModel(
                                   model: _model.restModel3,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const RestWidget(),
+                                  child: RestWidget(),
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.workoutModel11,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/6j3910zqstf5/v7.gif',
                                   title: 'Bicycle Crunches',
@@ -580,7 +583,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel12,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/ypxuvph5gcni/v9.gif',
                                   title: 'V Sit Rowing',
@@ -590,7 +593,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel13,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/kfxrzdp3gcjz/v21.gif',
                                   title: 'Dynamic Rollups',
@@ -598,18 +601,18 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                                 ),
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 4.0, 0.0, 4.0),
                                 child: wrapWithModel(
                                   model: _model.restModel4,
                                   updateCallback: () => safeSetState(() {}),
-                                  child: const RestWidget(),
+                                  child: RestWidget(),
                                 ),
                               ),
                               wrapWithModel(
                                 model: _model.workoutModel14,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/7wsxgdny3n5i/v19.gif',
                                   title: 'Heal Touches',
@@ -619,7 +622,7 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel15,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/zadg1h4vy4nh/v8.gif',
                                   title: 'Corkscrew',
@@ -629,25 +632,25 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                               wrapWithModel(
                                 model: _model.workoutModel16,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const WorkoutWidget(
+                                child: WorkoutWidget(
                                   cover:
                                       'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/m88otul11ox1/v11.gif',
                                   title: 'Windmill',
                                   duration: '40 s',
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
-                        ].divide(const SizedBox(height: 16.0)),
+                        ].divide(SizedBox(height: 16.0)),
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 24.0))
-                      .addToEnd(const SizedBox(height: 32.0)),
+                      .divide(SizedBox(height: 24.0))
+                      .addToEnd(SizedBox(height: 32.0)),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -659,12 +662,12 @@ class _ViewListWidgetState extends State<ViewListWidget> {
                   child: Container(
                     width: 32.0,
                     height: 32.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0x67BDBDBD),
                       shape: BoxShape.circle,
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Icon(
                         FFIcons.kchevronLeft,
                         color: FlutterFlowTheme.of(context).info,

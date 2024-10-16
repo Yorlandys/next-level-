@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'login_button_model.dart';
 export 'login_button_model.dart';
 
@@ -54,14 +56,14 @@ class _LoginButtonWidgetState extends State<LoginButtonWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.network(
-            widget.logo!,
+            widget!.logo!,
             width: 24.0,
             height: 24.0,
             fit: BoxFit.contain,
           ),
           Text(
             valueOrDefault<String>(
-              widget.title,
+              widget!.title,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -71,7 +73,7 @@ class _LoginButtonWidgetState extends State<LoginButtonWidget> {
                   fontWeight: FontWeight.bold,
                 ),
           ),
-        ].divide(const SizedBox(width: 8.0)),
+        ].divide(SizedBox(width: 8.0)),
       ),
     );
   }

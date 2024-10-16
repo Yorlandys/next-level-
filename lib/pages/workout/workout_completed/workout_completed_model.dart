@@ -1,9 +1,14 @@
 import '/components/custom_button/custom_button_widget.dart';
+import '/components/modals/exercise_feedback/exercise_feedback_widget.dart';
 import '/components/review_exercise/review_exercise_widget.dart';
 import '/components/workout_performance/workout_performance_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'workout_completed_widget.dart' show WorkoutCompletedWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class WorkoutCompletedModel extends FlutterFlowModel<WorkoutCompletedWidget> {
   ///  State fields for stateful widgets in this page.

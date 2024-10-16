@@ -1,7 +1,10 @@
 import '/components/indicator/indicator_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'gain_muscle_card_widget.dart' show GainMuscleCardWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class GainMuscleCardModel extends FlutterFlowModel<GainMuscleCardWidget> {
   ///  State fields for stateful widgets in this component.

@@ -2,11 +2,20 @@ import '/components/about_content/about_content_widget.dart';
 import '/components/body_about/body_about_widget.dart';
 import '/components/custom_button/custom_button_widget.dart';
 import '/components/day/day_widget.dart';
+import '/components/modals/recovery_duration/recovery_duration_widget.dart';
+import '/components/modals/training_days/training_days_widget.dart';
+import '/components/modals/warmup_duration/warmup_duration_widget.dart';
+import '/components/modals/workout_duration/workout_duration_widget.dart';
 import '/components/user_review_card/user_review_card_widget.dart';
 import '/components/warmup_card/warmup_card_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'about_workout_widget.dart' show AboutWorkoutWidget;
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class AboutWorkoutModel extends FlutterFlowModel<AboutWorkoutWidget> {
   ///  Local state fields for this page.

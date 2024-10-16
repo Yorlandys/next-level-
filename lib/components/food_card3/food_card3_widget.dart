@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'food_card3_model.dart';
 export 'food_card3_model.dart';
 
@@ -68,14 +70,14 @@ class _FoodCard3WidgetState extends State<FoodCard3Widget> {
                 children: [
                   Expanded(
                     child: ClipRRect(
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(0.0),
                         bottomRight: Radius.circular(0.0),
                         topLeft: Radius.circular(16.0),
                         topRight: Radius.circular(16.0),
                       ),
                       child: Image.network(
-                        widget.cover!,
+                        widget!.cover!,
                         width: double.infinity,
                         height: 200.0,
                         fit: BoxFit.cover,
@@ -87,7 +89,7 @@ class _FoodCard3WidgetState extends State<FoodCard3Widget> {
                     height: 44.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground2,
-                      boxShadow: const [
+                      boxShadow: [
                         BoxShadow(
                           blurRadius: 20.0,
                           color: Color(0xFF0C3D7D),
@@ -98,7 +100,7 @@ class _FoodCard3WidgetState extends State<FoodCard3Widget> {
                           spreadRadius: 30.0,
                         )
                       ],
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(16.0),
                         bottomRight: Radius.circular(16.0),
                         topLeft: Radius.circular(0.0),
@@ -111,9 +113,9 @@ class _FoodCard3WidgetState extends State<FoodCard3Widget> {
             ),
           ),
           Align(
-            alignment: const AlignmentDirectional(0.0, 1.0),
+            alignment: AlignmentDirectional(0.0, 1.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
+              padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -121,7 +123,7 @@ class _FoodCard3WidgetState extends State<FoodCard3Widget> {
                 children: [
                   Text(
                     valueOrDefault<String>(
-                      widget.title,
+                      widget!.title,
                       'na',
                     ),
                     maxLines: 2,
@@ -145,7 +147,7 @@ class _FoodCard3WidgetState extends State<FoodCard3Widget> {
                             color: FlutterFlowTheme.of(context).iconColor,
                             size: 16.0,
                           ),
-                          title: widget.time!,
+                          title: widget!.time!,
                         ),
                       ),
                       wrapWithModel(
@@ -157,33 +159,33 @@ class _FoodCard3WidgetState extends State<FoodCard3Widget> {
                             color: FlutterFlowTheme.of(context).iconColor,
                             size: 16.0,
                           ),
-                          title: widget.kcal!,
+                          title: widget!.kcal!,
                         ),
                       ),
-                    ].divide(const SizedBox(width: 14.0)),
+                    ].divide(SizedBox(width: 14.0)),
                   ),
-                ].divide(const SizedBox(height: 10.0)),
+                ].divide(SizedBox(height: 10.0)),
               ),
             ),
           ),
           Align(
-            alignment: const AlignmentDirectional(1.0, -1.0),
+            alignment: AlignmentDirectional(1.0, -1.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
               child: Stack(
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 children: [
                   Container(
                     width: 34.0,
                     height: 34.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0x7F1553A5),
                       shape: BoxShape.circle,
                     ),
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                   ),
                   Padding(
-                    padding: const EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0.0, 1.0, 0.0, 0.0),
                     child: ToggleIcon(
                       onPressed: () async {
                         safeSetState(() => _model.save = !_model.save);

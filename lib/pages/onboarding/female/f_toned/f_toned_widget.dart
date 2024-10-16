@@ -2,10 +2,14 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'f_toned_model.dart';
 export 'f_toned_model.dart';
 
@@ -37,8 +41,8 @@ class _FTonedWidgetState extends State<FTonedWidget>
             curve: Curves.easeInOutQuint,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -71,7 +75,7 @@ class _FTonedWidgetState extends State<FTonedWidget>
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,7 +100,7 @@ class _FTonedWidgetState extends State<FTonedWidget>
                               shape: BoxShape.circle,
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 FFIcons.kchevronLeft,
                                 color: FlutterFlowTheme.of(context).primaryText,
@@ -119,7 +123,7 @@ class _FTonedWidgetState extends State<FTonedWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -172,12 +176,12 @@ class _FTonedWidgetState extends State<FTonedWidget>
                             ),
                           ).animateOnPageLoad(
                               animationsMap['richTextOnPageLoadAnimation']!),
-                        ].divide(const SizedBox(height: 4.0)),
+                        ].divide(SizedBox(height: 4.0)),
                       ),
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -202,25 +206,25 @@ class _FTonedWidgetState extends State<FTonedWidget>
                                   fontWeight: FontWeight.normal,
                                 ),
                           ),
-                        ].divide(const SizedBox(height: 24.0)),
+                        ].divide(SizedBox(height: 24.0)),
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(height: 24.0))
-                      .addToEnd(const SizedBox(height: 24.0)),
+                      .addToStart(SizedBox(height: 24.0))
+                      .addToEnd(SizedBox(height: 24.0)),
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 24.0),
+                      EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 24.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(
                         'F_BodyType',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 200),
@@ -233,9 +237,9 @@ class _FTonedWidgetState extends State<FTonedWidget>
                       width: double.infinity,
                       height: 44.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -246,7 +250,7 @@ class _FTonedWidgetState extends State<FTonedWidget>
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

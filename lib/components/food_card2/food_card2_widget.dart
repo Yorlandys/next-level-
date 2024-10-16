@@ -3,6 +3,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'food_card2_model.dart';
 export 'food_card2_model.dart';
 
@@ -56,7 +58,7 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
         borderRadius: BorderRadius.circular(16.0),
       ),
       child: Stack(
-        alignment: const AlignmentDirectional(0.0, 1.0),
+        alignment: AlignmentDirectional(0.0, 1.0),
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(16.0),
@@ -69,14 +71,14 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
                 children: [
                   Expanded(
                     child: ClipRRect(
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(0.0),
                         bottomRight: Radius.circular(0.0),
                         topLeft: Radius.circular(16.0),
                         topRight: Radius.circular(16.0),
                       ),
                       child: Image.network(
-                        widget.cover!,
+                        widget!.cover!,
                         width: double.infinity,
                         height: 200.0,
                         fit: BoxFit.cover,
@@ -88,7 +90,7 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
                     height: 44.0,
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground2,
-                      boxShadow: const [
+                      boxShadow: [
                         BoxShadow(
                           blurRadius: 20.0,
                           color: Color(0xFF0C3D7D),
@@ -99,7 +101,7 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
                           spreadRadius: 30.0,
                         )
                       ],
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(16.0),
                         bottomRight: Radius.circular(16.0),
                         topLeft: Radius.circular(0.0),
@@ -112,7 +114,7 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
             ),
           ),
           Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
+            padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 12.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.end,
@@ -120,7 +122,7 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget.title,
+                    widget!.title,
                     'na',
                   ),
                   maxLines: 2,
@@ -144,7 +146,7 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
                           color: FlutterFlowTheme.of(context).iconColor,
                           size: 16.0,
                         ),
-                        title: widget.time!,
+                        title: widget!.time!,
                       ),
                     ),
                     wrapWithModel(
@@ -156,28 +158,28 @@ class _FoodCard2WidgetState extends State<FoodCard2Widget> {
                           color: FlutterFlowTheme.of(context).iconColor,
                           size: 16.0,
                         ),
-                        title: widget.kcal!,
+                        title: widget!.kcal!,
                       ),
                     ),
-                  ].divide(const SizedBox(width: 14.0)),
+                  ].divide(SizedBox(width: 14.0)),
                 ),
-              ].divide(const SizedBox(height: 10.0)),
+              ].divide(SizedBox(height: 10.0)),
             ),
           ),
           Align(
-            alignment: const AlignmentDirectional(1.0, -1.0),
+            alignment: AlignmentDirectional(1.0, -1.0),
             child: Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 12.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 12.0, 12.0, 0.0),
               child: Container(
                 width: 36.0,
                 height: 36.0,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   color: Color(0x7F1553A5),
                   shape: BoxShape.circle,
                 ),
-                alignment: const AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 1.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 1.0, 0.0),
                   child: ToggleIcon(
                     onPressed: () async {
                       safeSetState(() => _model.toggle = !_model.toggle);

@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'exercise_details2_model.dart';
 export 'exercise_details2_model.dart';
 
@@ -43,14 +45,14 @@ class _ExerciseDetails2WidgetState extends State<ExerciseDetails2Widget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          widget.icon!,
+          widget!.icon!,
           Text(
             valueOrDefault<String>(
-              widget.title,
+              widget!.title,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -60,7 +62,7 @@ class _ExerciseDetails2WidgetState extends State<ExerciseDetails2Widget> {
                   fontWeight: FontWeight.w500,
                 ),
           ),
-        ].divide(const SizedBox(width: 12.0)),
+        ].divide(SizedBox(width: 12.0)),
       ),
     );
   }

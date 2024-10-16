@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'day_card_model.dart';
 export 'day_card_model.dart';
 
@@ -41,7 +43,7 @@ class _DayCardWidgetState extends State<DayCardWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: InkWell(
         splashColor: Colors.transparent,
         focusColor: Colors.transparent,
@@ -52,10 +54,10 @@ class _DayCardWidgetState extends State<DayCardWidget> {
           safeSetState(() {});
         },
         child: Stack(
-          alignment: const AlignmentDirectional(1.0, -1.0),
+          alignment: AlignmentDirectional(1.0, -1.0),
           children: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 8.0, 0.0),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10.0),
                 child: Container(
@@ -75,14 +77,14 @@ class _DayCardWidgetState extends State<DayCardWidget> {
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
                           valueOrDefault<String>(
-                            widget.title,
+                            widget!.title,
                             'na',
                           ),
                           style:
@@ -108,7 +110,7 @@ class _DayCardWidgetState extends State<DayCardWidget> {
                   shape: BoxShape.circle,
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Icon(
                     FFIcons.kcheck,
                     color: FlutterFlowTheme.of(context).info,

@@ -2,6 +2,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'set_duration_model.dart';
 export 'set_duration_model.dart';
 
@@ -37,13 +39,13 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
   @override
   Widget build(BuildContext context) {
     return Align(
-      alignment: const AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.0, 0.0),
       child: Container(
         width: 300.0,
         height: 300.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondaryBackground2,
-          boxShadow: const [
+          boxShadow: [
             BoxShadow(
               blurRadius: 20.0,
               color: Color(0x33000000),
@@ -57,7 +59,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: EdgeInsets.all(20.0),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -77,13 +79,13 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(
+                    Container(
                       width: 140.0,
                       height: double.infinity,
                       child: CarouselSlider(
                         items: [
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '05',
                               style: FlutterFlowTheme.of(context)
@@ -98,7 +100,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '10',
                               style: FlutterFlowTheme.of(context)
@@ -113,7 +115,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '15',
                               style: FlutterFlowTheme.of(context)
@@ -128,7 +130,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '20',
                               style: FlutterFlowTheme.of(context)
@@ -143,7 +145,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '25',
                               style: FlutterFlowTheme.of(context)
@@ -158,7 +160,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '30',
                               style: FlutterFlowTheme.of(context)
@@ -173,7 +175,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '35',
                               style: FlutterFlowTheme.of(context)
@@ -188,7 +190,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '40',
                               style: FlutterFlowTheme.of(context)
@@ -203,7 +205,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '45',
                               style: FlutterFlowTheme.of(context)
@@ -218,7 +220,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '50',
                               style: FlutterFlowTheme.of(context)
@@ -233,7 +235,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '55',
                               style: FlutterFlowTheme.of(context)
@@ -248,7 +250,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               '60',
                               style: FlutterFlowTheme.of(context)
@@ -334,9 +336,9 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                           ),
                     ),
                   ),
-                ].divide(const SizedBox(width: 24.0)),
+                ].divide(SizedBox(width: 24.0)),
               ),
-            ].divide(const SizedBox(height: 20.0)),
+            ].divide(SizedBox(height: 20.0)),
           ),
         ),
       ),

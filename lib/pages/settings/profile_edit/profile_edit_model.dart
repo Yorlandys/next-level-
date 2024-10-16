@@ -1,7 +1,22 @@
+import '/components/modals/popup/birthday/birthday_widget.dart';
+import '/components/modals/popup/delete_account/delete_account_widget.dart';
+import '/components/modals/popup/edit_gender/edit_gender_widget.dart';
+import '/components/modals/popup/edit_goal/edit_goal_widget.dart';
+import '/components/modals/popup/edit_height/edit_height_widget.dart';
+import '/components/modals/popup/edit_name/edit_name_widget.dart';
+import '/components/modals/popup/edit_weight/edit_weight_widget.dart';
+import '/components/modals/popup/knee_pain/knee_pain_widget.dart';
+import '/components/modals/popup/newsletter/newsletter_widget.dart';
+import '/components/modals/popup/units/units_widget.dart';
+import '/components/modals/upload_media/upload_media_widget.dart';
 import '/components/settings_menu_btn/settings_menu_btn_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'profile_edit_widget.dart' show ProfileEditWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ProfileEditModel extends FlutterFlowModel<ProfileEditWidget> {
   ///  State fields for stateful widgets in this page.

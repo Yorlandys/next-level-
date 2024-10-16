@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'workout_model.dart';
 export 'workout_model.dart';
 
@@ -53,7 +55,7 @@ class _WorkoutWidgetState extends State<WorkoutWidget> {
         context.pushNamed(
           'Instructions',
           extra: <String, dynamic>{
-            kTransitionInfoKey: const TransitionInfo(
+            kTransitionInfoKey: TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.rightToLeft,
               duration: Duration(milliseconds: 200),
@@ -62,14 +64,14 @@ class _WorkoutWidgetState extends State<WorkoutWidget> {
         );
       },
       child: Container(
-        decoration: const BoxDecoration(),
+        decoration: BoxDecoration(),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8.0),
               child: Image.network(
-                widget.cover!,
+                widget!.cover!,
                 width: 64.0,
                 height: 50.0,
                 fit: BoxFit.cover,
@@ -82,7 +84,7 @@ class _WorkoutWidgetState extends State<WorkoutWidget> {
               children: [
                 Text(
                   valueOrDefault<String>(
-                    widget.title,
+                    widget!.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -103,10 +105,10 @@ class _WorkoutWidgetState extends State<WorkoutWidget> {
                     ),
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
-                        widget.duration,
+                        widget!.duration,
                         'na',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -118,9 +120,9 @@ class _WorkoutWidgetState extends State<WorkoutWidget> {
                     ),
                   ),
                 ),
-              ].divide(const SizedBox(height: 4.0)),
+              ].divide(SizedBox(height: 4.0)),
             ),
-          ].divide(const SizedBox(width: 12.0)),
+          ].divide(SizedBox(width: 12.0)),
         ),
       ),
     );

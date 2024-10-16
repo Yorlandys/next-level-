@@ -1,8 +1,12 @@
 import '/components/custom_button/custom_button_widget.dart';
 import '/components/filters/filters_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'filter_workouts_widget.dart' show FilterWorkoutsWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class FilterWorkoutsModel extends FlutterFlowModel<FilterWorkoutsWidget> {
   ///  Local state fields for this page.

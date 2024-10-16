@@ -1,7 +1,10 @@
 import '/components/custom_switch/custom_switch_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'sound_settings_model.dart';
 export 'sound_settings_model.dart';
 
@@ -48,7 +51,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -78,7 +81,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 12.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -104,7 +107,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                                               FontWeight.w600,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(width: 12.0)),
+                                                ].divide(SizedBox(width: 12.0)),
                                               ),
                                               Text(
                                                 'Voice',
@@ -145,7 +148,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 12.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -187,9 +190,9 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 4.0)),
+                                                        SizedBox(height: 4.0)),
                                                   ),
-                                                ].divide(const SizedBox(width: 12.0)),
+                                                ].divide(SizedBox(width: 12.0)),
                                               ),
                                               wrapWithModel(
                                                 model:
@@ -223,7 +226,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 12.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -265,9 +268,9 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 4.0)),
+                                                        SizedBox(height: 4.0)),
                                                   ),
-                                                ].divide(const SizedBox(width: 12.0)),
+                                                ].divide(SizedBox(width: 12.0)),
                                               ),
                                               wrapWithModel(
                                                 model:
@@ -301,7 +304,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 12.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -343,9 +346,9 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                                                 ),
                                                       ),
                                                     ].divide(
-                                                        const SizedBox(height: 4.0)),
+                                                        SizedBox(height: 4.0)),
                                                   ),
-                                                ].divide(const SizedBox(width: 12.0)),
+                                                ].divide(SizedBox(width: 12.0)),
                                               ),
                                               wrapWithModel(
                                                 model:
@@ -364,15 +367,15 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                                   ),
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
-                        ].divide(const SizedBox(height: 24.0)),
+                        ].divide(SizedBox(height: 24.0)),
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 24.0))
-                      .addToStart(const SizedBox(height: 60.0))
-                      .addToEnd(const SizedBox(height: 80.0)),
+                      .divide(SizedBox(height: 24.0))
+                      .addToStart(SizedBox(height: 60.0))
+                      .addToEnd(SizedBox(height: 80.0)),
                 ),
               ),
               Row(
@@ -381,7 +384,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                 children: [
                   Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,
@@ -393,12 +396,12 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                       child: Container(
                         width: 32.0,
                         height: 32.0,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Color(0x67BDBDBD),
                           shape: BoxShape.circle,
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Icon(
                             FFIcons.kchevronLeft,
                             color: FlutterFlowTheme.of(context).info,
@@ -418,7 +421,7 @@ class _SoundSettingsWidgetState extends State<SoundSettingsWidget> {
                           fontWeight: FontWeight.w600,
                         ),
                   ),
-                ].addToEnd(const SizedBox(width: 36.0)),
+                ].addToEnd(SizedBox(width: 36.0)),
               ),
             ],
           ),

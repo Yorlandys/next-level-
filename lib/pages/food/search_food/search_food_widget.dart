@@ -1,7 +1,10 @@
 import '/components/categories_card/categories_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'search_food_model.dart';
 export 'search_food_model.dart';
 
@@ -51,7 +54,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,7 +92,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -102,7 +105,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel1,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/ma95oohwox84/c1.png',
                                         title: 'Breakfast',
@@ -126,7 +129,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -139,7 +142,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel2,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/1lbab5ucta84/c2.png',
                                         title: 'Lunch',
@@ -163,7 +166,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -176,7 +179,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel3,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/vb76e2a4t80z/c3.png',
                                         title: 'Dinner',
@@ -200,7 +203,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -213,7 +216,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel4,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gkrbqas69pqf/c4.png',
                                         title: 'Suger Free',
@@ -237,7 +240,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -250,7 +253,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel5,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/0qhpuzgptwp5/c5.png',
                                         title: 'Low Calories',
@@ -274,7 +277,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -287,7 +290,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel6,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/fkajl8bgzrqv/c6.png',
                                         title: 'Vegitarian',
@@ -311,7 +314,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -324,7 +327,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel7,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/xhq82odeqd6i/c7.png',
                                         title: 'Snack',
@@ -348,7 +351,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -361,7 +364,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel8,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/17cacqljb3nk/c8.png',
                                         title: 'Salad',
@@ -385,7 +388,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                       context.pushNamed(
                                         'ViewAll',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -398,7 +401,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                                     child: wrapWithModel(
                                       model: _model.categoriesCardModel9,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const CategoriesCardWidget(
+                                      child: CategoriesCardWidget(
                                         icon:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/wr91nm92yeam/c9.png',
                                         title: 'Soup',
@@ -409,12 +412,12 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                               ),
                             ),
                           ),
-                        ].divide(const SizedBox(height: 20.0)),
+                        ].divide(SizedBox(height: 20.0)),
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(height: 100.0))
-                      .addToEnd(const SizedBox(height: 32.0)),
+                      .addToStart(SizedBox(height: 100.0))
+                      .addToEnd(SizedBox(height: 32.0)),
                 ),
               ),
               Container(
@@ -425,7 +428,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                     BoxShadow(
                       blurRadius: 8.0,
                       color: FlutterFlowTheme.of(context).primaryBackground2,
-                      offset: const Offset(
+                      offset: Offset(
                         0.0,
                         2.0,
                       ),
@@ -434,7 +437,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -453,12 +456,12 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kchevronLeft,
                                   color: FlutterFlowTheme.of(context).info,
@@ -488,7 +491,7 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                               context.pushNamed(
                                 'FoodFilter',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -500,12 +503,12 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kfilter,
                                   color: FlutterFlowTheme.of(context).info,
@@ -550,8 +553,8 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                               errorBorder: InputBorder.none,
                               focusedErrorBorder: InputBorder.none,
                               filled: true,
-                              fillColor: const Color(0xFF052146),
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                              fillColor: Color(0xFF052146),
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 12.0, 12.0, 12.0),
                               prefixIcon: Icon(
                                 FFIcons.ksearch,
@@ -572,8 +575,8 @@ class _SearchFoodWidgetState extends State<SearchFoodWidget> {
                         ),
                       ),
                     ]
-                        .divide(const SizedBox(height: 20.0))
-                        .addToEnd(const SizedBox(height: 6.0)),
+                        .divide(SizedBox(height: 20.0))
+                        .addToEnd(SizedBox(height: 6.0)),
                   ),
                 ),
               ),

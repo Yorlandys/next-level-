@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'music_card_model.dart';
 export 'music_card_model.dart';
 
@@ -52,7 +54,7 @@ class _MusicCardWidgetState extends State<MusicCardWidget> {
             'https://open.spotify.com/track/1Ks6OE9M7vz55OxDwkdBYx?si=6f28afae33174ec1');
       },
       child: Container(
-        decoration: const BoxDecoration(),
+        decoration: BoxDecoration(),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,7 +65,7 @@ class _MusicCardWidgetState extends State<MusicCardWidget> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                   child: Image.network(
-                    widget.cover!,
+                    widget!.cover!,
                     width: 70.0,
                     height: 70.0,
                     fit: BoxFit.cover,
@@ -71,7 +73,7 @@ class _MusicCardWidgetState extends State<MusicCardWidget> {
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget.title,
+                    widget!.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -82,10 +84,10 @@ class _MusicCardWidgetState extends State<MusicCardWidget> {
                         fontWeight: FontWeight.w600,
                       ),
                 ),
-              ].divide(const SizedBox(width: 12.0)),
+              ].divide(SizedBox(width: 12.0)),
             ),
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 4.0, 0.0),
               child: Icon(
                 Icons.chevron_right_rounded,
                 color: FlutterFlowTheme.of(context).bgColor,

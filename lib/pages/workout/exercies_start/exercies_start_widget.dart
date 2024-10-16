@@ -2,9 +2,12 @@ import '/components/modals/popup/quitworkout/quitworkout_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'exercies_start_model.dart';
 export 'exercies_start_model.dart';
 
@@ -51,7 +54,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
           top: true,
           child: Stack(
             children: [
-              SizedBox(
+              Container(
                 width: double.infinity,
                 height: double.infinity,
                 child: PageView(
@@ -78,7 +81,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                             fit: BoxFit.cover,
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -112,16 +115,15 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                               controller:
                                                   _model.timerController1,
                                               updateStateInterval:
-                                                  const Duration(milliseconds: 1000),
+                                                  Duration(milliseconds: 1000),
                                               onChanged: (value, displayTime,
                                                   shouldUpdate) {
                                                 _model.timerMilliseconds1 =
                                                     value;
                                                 _model.timerValue1 =
                                                     displayTime;
-                                                if (shouldUpdate) {
+                                                if (shouldUpdate)
                                                   safeSetState(() {});
-                                                }
                                               },
                                               textAlign: TextAlign.start,
                                               style: FlutterFlowTheme.of(
@@ -139,7 +141,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                   ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 5.0),
                                               child: Text(
                                                 'S',
@@ -155,7 +157,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                         ),
                                               ),
                                             ),
-                                          ].divide(const SizedBox(width: 5.0)),
+                                          ].divide(SizedBox(width: 5.0)),
                                         ),
                                         Text(
                                           'Single Dumbble Squat',
@@ -168,7 +170,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                 fontWeight: FontWeight.w900,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                     InkWell(
                                       splashColor: Colors.transparent,
@@ -179,7 +181,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         context.pushNamed(
                                           'Instructions',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: const TransitionInfo(
+                                            kTransitionInfoKey: TransitionInfo(
                                               hasTransition: true,
                                               transitionType: PageTransitionType
                                                   .rightToLeft,
@@ -192,13 +194,13 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                       child: Container(
                                         width: 24.0,
                                         height: 24.0,
-                                        decoration: const BoxDecoration(
+                                        decoration: BoxDecoration(
                                           color: Color(0x67BDBDBD),
                                           shape: BoxShape.circle,
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kinfoSmall,
                                             color: FlutterFlowTheme.of(context)
@@ -208,7 +210,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 8.0)),
+                                  ].divide(SizedBox(width: 8.0)),
                                 ),
                                 InkWell(
                                   splashColor: Colors.transparent,
@@ -217,19 +219,19 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     await _model.pageViewController?.nextPage(
-                                      duration: const Duration(milliseconds: 300),
+                                      duration: Duration(milliseconds: 300),
                                       curve: Curves.ease,
                                     );
                                   },
                                   child: Container(
                                     width: 60.0,
                                     height: 60.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.skip_next_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -242,7 +244,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                               ],
                             ),
                           ),
-                        ].addToStart(const SizedBox(height: 1.0)),
+                        ].addToStart(SizedBox(height: 1.0)),
                       ),
                     ),
                     InkWell(
@@ -264,7 +266,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                             fit: BoxFit.cover,
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -298,16 +300,15 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                               controller:
                                                   _model.timerController2,
                                               updateStateInterval:
-                                                  const Duration(milliseconds: 1000),
+                                                  Duration(milliseconds: 1000),
                                               onChanged: (value, displayTime,
                                                   shouldUpdate) {
                                                 _model.timerMilliseconds2 =
                                                     value;
                                                 _model.timerValue2 =
                                                     displayTime;
-                                                if (shouldUpdate) {
+                                                if (shouldUpdate)
                                                   safeSetState(() {});
-                                                }
                                               },
                                               textAlign: TextAlign.start,
                                               style: FlutterFlowTheme.of(
@@ -325,7 +326,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                   ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 5.0),
                                               child: Text(
                                                 'S',
@@ -341,7 +342,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                         ),
                                               ),
                                             ),
-                                          ].divide(const SizedBox(width: 5.0)),
+                                          ].divide(SizedBox(width: 5.0)),
                                         ),
                                         Text(
                                           'One-Arm Deadlift',
@@ -354,7 +355,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                 fontWeight: FontWeight.w900,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                     InkWell(
                                       splashColor: Colors.transparent,
@@ -365,7 +366,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         context.pushNamed(
                                           'Instructions',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: const TransitionInfo(
+                                            kTransitionInfoKey: TransitionInfo(
                                               hasTransition: true,
                                               transitionType: PageTransitionType
                                                   .rightToLeft,
@@ -378,13 +379,13 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                       child: Container(
                                         width: 24.0,
                                         height: 24.0,
-                                        decoration: const BoxDecoration(
+                                        decoration: BoxDecoration(
                                           color: Color(0x67BDBDBD),
                                           shape: BoxShape.circle,
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kinfoSmall,
                                             color: FlutterFlowTheme.of(context)
@@ -394,7 +395,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 8.0)),
+                                  ].divide(SizedBox(width: 8.0)),
                                 ),
                                 InkWell(
                                   splashColor: Colors.transparent,
@@ -403,19 +404,19 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     await _model.pageViewController?.nextPage(
-                                      duration: const Duration(milliseconds: 300),
+                                      duration: Duration(milliseconds: 300),
                                       curve: Curves.ease,
                                     );
                                   },
                                   child: Container(
                                     width: 60.0,
                                     height: 60.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.skip_next_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -428,7 +429,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                               ],
                             ),
                           ),
-                        ].addToStart(const SizedBox(height: 1.0)),
+                        ].addToStart(SizedBox(height: 1.0)),
                       ),
                     ),
                     InkWell(
@@ -450,7 +451,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                             fit: BoxFit.cover,
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -484,16 +485,15 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                               controller:
                                                   _model.timerController3,
                                               updateStateInterval:
-                                                  const Duration(milliseconds: 1000),
+                                                  Duration(milliseconds: 1000),
                                               onChanged: (value, displayTime,
                                                   shouldUpdate) {
                                                 _model.timerMilliseconds3 =
                                                     value;
                                                 _model.timerValue3 =
                                                     displayTime;
-                                                if (shouldUpdate) {
+                                                if (shouldUpdate)
                                                   safeSetState(() {});
-                                                }
                                               },
                                               textAlign: TextAlign.start,
                                               style: FlutterFlowTheme.of(
@@ -511,7 +511,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                   ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 5.0),
                                               child: Text(
                                                 'S',
@@ -527,7 +527,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                         ),
                                               ),
                                             ),
-                                          ].divide(const SizedBox(width: 5.0)),
+                                          ].divide(SizedBox(width: 5.0)),
                                         ),
                                         Text(
                                           'Side Crunches',
@@ -540,7 +540,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                 fontWeight: FontWeight.w900,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                     InkWell(
                                       splashColor: Colors.transparent,
@@ -551,7 +551,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         context.pushNamed(
                                           'Instructions',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: const TransitionInfo(
+                                            kTransitionInfoKey: TransitionInfo(
                                               hasTransition: true,
                                               transitionType: PageTransitionType
                                                   .rightToLeft,
@@ -564,13 +564,13 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                       child: Container(
                                         width: 24.0,
                                         height: 24.0,
-                                        decoration: const BoxDecoration(
+                                        decoration: BoxDecoration(
                                           color: Color(0x67BDBDBD),
                                           shape: BoxShape.circle,
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kinfoSmall,
                                             color: FlutterFlowTheme.of(context)
@@ -580,7 +580,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 8.0)),
+                                  ].divide(SizedBox(width: 8.0)),
                                 ),
                                 InkWell(
                                   splashColor: Colors.transparent,
@@ -589,19 +589,19 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     await _model.pageViewController?.nextPage(
-                                      duration: const Duration(milliseconds: 300),
+                                      duration: Duration(milliseconds: 300),
                                       curve: Curves.ease,
                                     );
                                   },
                                   child: Container(
                                     width: 60.0,
                                     height: 60.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.skip_next_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -614,7 +614,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                               ],
                             ),
                           ),
-                        ].addToStart(const SizedBox(height: 1.0)),
+                        ].addToStart(SizedBox(height: 1.0)),
                       ),
                     ),
                     InkWell(
@@ -636,7 +636,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                             fit: BoxFit.cover,
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -670,16 +670,15 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                               controller:
                                                   _model.timerController4,
                                               updateStateInterval:
-                                                  const Duration(milliseconds: 1000),
+                                                  Duration(milliseconds: 1000),
                                               onChanged: (value, displayTime,
                                                   shouldUpdate) {
                                                 _model.timerMilliseconds4 =
                                                     value;
                                                 _model.timerValue4 =
                                                     displayTime;
-                                                if (shouldUpdate) {
+                                                if (shouldUpdate)
                                                   safeSetState(() {});
-                                                }
                                               },
                                               textAlign: TextAlign.start,
                                               style: FlutterFlowTheme.of(
@@ -697,7 +696,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                   ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsetsDirectional
+                                              padding: EdgeInsetsDirectional
                                                   .fromSTEB(0.0, 0.0, 0.0, 5.0),
                                               child: Text(
                                                 'S',
@@ -713,7 +712,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                         ),
                                               ),
                                             ),
-                                          ].divide(const SizedBox(width: 5.0)),
+                                          ].divide(SizedBox(width: 5.0)),
                                         ),
                                         Text(
                                           'Side Bends',
@@ -726,7 +725,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                                 fontWeight: FontWeight.w900,
                                               ),
                                         ),
-                                      ].divide(const SizedBox(height: 12.0)),
+                                      ].divide(SizedBox(height: 12.0)),
                                     ),
                                     InkWell(
                                       splashColor: Colors.transparent,
@@ -737,7 +736,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         context.pushNamed(
                                           'Instructions',
                                           extra: <String, dynamic>{
-                                            kTransitionInfoKey: const TransitionInfo(
+                                            kTransitionInfoKey: TransitionInfo(
                                               hasTransition: true,
                                               transitionType: PageTransitionType
                                                   .rightToLeft,
@@ -750,13 +749,13 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                       child: Container(
                                         width: 24.0,
                                         height: 24.0,
-                                        decoration: const BoxDecoration(
+                                        decoration: BoxDecoration(
                                           color: Color(0x67BDBDBD),
                                           shape: BoxShape.circle,
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kinfoSmall,
                                             color: FlutterFlowTheme.of(context)
@@ -766,7 +765,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                         ),
                                       ),
                                     ),
-                                  ].divide(const SizedBox(width: 8.0)),
+                                  ].divide(SizedBox(width: 8.0)),
                                 ),
                                 InkWell(
                                   splashColor: Colors.transparent,
@@ -777,7 +776,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                     context.pushNamed(
                                       'WorkoutCompleted',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.rightToLeft,
@@ -789,12 +788,12 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   child: Container(
                                     width: 60.0,
                                     height: 60.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         Icons.skip_next_rounded,
                                         color: FlutterFlowTheme.of(context)
@@ -807,27 +806,27 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                               ],
                             ),
                           ),
-                        ].addToStart(const SizedBox(height: 1.0)),
+                        ].addToStart(SizedBox(height: 1.0)),
                       ),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(-1.0, 0.0),
+                              alignment: AlignmentDirectional(-1.0, 0.0),
                               child: Builder(
                                 builder: (context) => InkWell(
                                   splashColor: Colors.transparent,
@@ -836,14 +835,14 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   highlightColor: Colors.transparent,
                                   onTap: () async {
                                     showDialog(
-                                      barrierColor: const Color(0x34000000),
+                                      barrierColor: Color(0x34000000),
                                       context: context,
                                       builder: (dialogContext) {
                                         return Dialog(
                                           elevation: 0,
                                           insetPadding: EdgeInsets.zero,
                                           backgroundColor: Colors.transparent,
-                                          alignment: const AlignmentDirectional(
+                                          alignment: AlignmentDirectional(
                                                   0.0, 0.0)
                                               .resolve(
                                                   Directionality.of(context)),
@@ -851,7 +850,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                             onTap: () =>
                                                 FocusScope.of(dialogContext)
                                                     .unfocus(),
-                                            child: const QuitworkoutWidget(),
+                                            child: QuitworkoutWidget(),
                                           ),
                                         );
                                       },
@@ -860,12 +859,12 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   child: Container(
                                     width: 32.0,
                                     height: 32.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         FFIcons.kx,
                                         color: FlutterFlowTheme.of(context)
@@ -887,7 +886,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                               milliSecond: false,
                             ),
                             controller: _model.timerController5,
-                            updateStateInterval: const Duration(milliseconds: 1000),
+                            updateStateInterval: Duration(milliseconds: 1000),
                             onChanged: (value, displayTime, shouldUpdate) {
                               _model.timerMilliseconds5 = value;
                               _model.timerValue5 = displayTime;
@@ -919,7 +918,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                     context.pushNamed(
                                       'Music',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.rightToLeft,
@@ -931,12 +930,12 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   child: Container(
                                     width: 32.0,
                                     height: 32.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         FFIcons.kmusic,
                                         color: FlutterFlowTheme.of(context)
@@ -955,7 +954,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                     context.pushNamed(
                                       'ViewList',
                                       extra: <String, dynamic>{
-                                        kTransitionInfoKey: const TransitionInfo(
+                                        kTransitionInfoKey: TransitionInfo(
                                           hasTransition: true,
                                           transitionType:
                                               PageTransitionType.rightToLeft,
@@ -967,12 +966,12 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                   child: Container(
                                     width: 32.0,
                                     height: 32.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         FFIcons.klist,
                                         color: FlutterFlowTheme.of(context)
@@ -982,13 +981,13 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(width: 14.0)),
+                              ].divide(SizedBox(width: 14.0)),
                             ),
                           ),
                         ],
                       ),
                     ),
-                  ].divide(const SizedBox(height: 20.0)),
+                  ].divide(SizedBox(height: 20.0)),
                 ),
               ),
               Row(
@@ -1025,7 +1024,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                     child: Container(
                       width: 24.0,
                       height: 4.0,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.transparent,
                       ),
                     ),
@@ -1061,7 +1060,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                     child: Container(
                       width: 24.0,
                       height: 4.0,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.transparent,
                       ),
                     ),
@@ -1097,7 +1096,7 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                     child: Container(
                       width: 24.0,
                       height: 4.0,
-                      decoration: const BoxDecoration(
+                      decoration: BoxDecoration(
                         color: Colors.transparent,
                       ),
                     ),
@@ -1130,9 +1129,9 @@ class _ExerciesStartWidgetState extends State<ExerciesStartWidget> {
                     ),
                   ),
                 ]
-                    .divide(const SizedBox(width: 4.0))
-                    .addToStart(const SizedBox(width: 16.0))
-                    .addToEnd(const SizedBox(width: 16.0)),
+                    .divide(SizedBox(width: 4.0))
+                    .addToStart(SizedBox(width: 16.0))
+                    .addToEnd(SizedBox(width: 16.0)),
               ),
             ],
           ),

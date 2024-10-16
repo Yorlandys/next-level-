@@ -3,7 +3,10 @@ import '/components/custom_switch/custom_switch_widget.dart';
 import '/components/filter_tag/filter_tag_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'food_filter_model.dart';
 export 'food_filter_model.dart';
 
@@ -51,13 +54,13 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 70.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -166,7 +169,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 12.0)),
+                              ].divide(SizedBox(height: 12.0)),
                             ),
                           ),
                           Column(
@@ -174,7 +177,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 0.0, 12.0),
                                 child: Text(
                                   'Calories',
@@ -195,15 +198,15 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                 children: [
                                   Expanded(
                                     child: Stack(
-                                      alignment: const AlignmentDirectional(1.0, 0.0),
+                                      alignment: AlignmentDirectional(1.0, 0.0),
                                       children: [
-                                        SizedBox(
+                                        Container(
                                           width: double.infinity,
                                           child: Slider(
                                             activeColor:
                                                 FlutterFlowTheme.of(context)
                                                     .tertiary,
-                                            inactiveColor: const Color(0xFF60ADFF),
+                                            inactiveColor: Color(0xFF60ADFF),
                                             min: 2.0,
                                             max: 14.0,
                                             value: _model.sliderValue ??= 2.0,
@@ -218,7 +221,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 20.0, 0.0),
                                           child: Container(
                                             width: 20.0,
@@ -237,7 +240,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                 ],
                               ),
                               Padding(
-                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                padding: EdgeInsetsDirectional.fromSTEB(
                                     16.0, 0.0, 16.0, 0.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
@@ -245,7 +248,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           4.0, 0.0, 0.0, 0.0),
                                       child: Text(
                                         '0',
@@ -277,7 +280,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                             ],
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -412,11 +415,11 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 12.0)),
+                              ].divide(SizedBox(height: 12.0)),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -486,11 +489,11 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 12.0)),
+                              ].divide(SizedBox(height: 12.0)),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -664,11 +667,11 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                                     ),
                                   ],
                                 ),
-                              ].divide(const SizedBox(height: 12.0)),
+                              ].divide(SizedBox(height: 12.0)),
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 16.0, 0.0, 16.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -698,17 +701,17 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(height: 32.0))
-                            .addToEnd(const SizedBox(height: 80.0)),
+                            .divide(SizedBox(height: 32.0))
+                            .addToEnd(SizedBox(height: 80.0)),
                       ),
                     ),
                   ],
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground2,
@@ -717,7 +720,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                           blurRadius: 20.0,
                           color:
                               FlutterFlowTheme.of(context).primaryBackground2,
-                          offset: const Offset(
+                          offset: Offset(
                             0.0,
                             2.0,
                           ),
@@ -727,7 +730,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                     ),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -739,7 +742,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                         child: wrapWithModel(
                           model: _model.customButtonModel,
                           updateCallback: () => safeSetState(() {}),
-                          child: const CustomButtonWidget(
+                          child: CustomButtonWidget(
                             title: 'Done',
                           ),
                         ),
@@ -756,7 +759,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                     BoxShadow(
                       blurRadius: 8.0,
                       color: FlutterFlowTheme.of(context).primaryBackground2,
-                      offset: const Offset(
+                      offset: Offset(
                         0.0,
                         2.0,
                       ),
@@ -765,7 +768,7 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -784,12 +787,12 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kchevronLeft,
                                   color: FlutterFlowTheme.of(context).info,
@@ -825,8 +828,8 @@ class _FoodFilterWidgetState extends State<FoodFilterWidget> {
                         ],
                       ),
                     ]
-                        .divide(const SizedBox(height: 20.0))
-                        .addToEnd(const SizedBox(height: 6.0)),
+                        .divide(SizedBox(height: 20.0))
+                        .addToEnd(SizedBox(height: 6.0)),
                   ),
                 ),
               ),

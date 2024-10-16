@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'feedback_card_model.dart';
 export 'feedback_card_model.dart';
 
@@ -52,7 +54,7 @@ class _FeedbackCardWidgetState extends State<FeedbackCardWidget> {
         borderRadius: BorderRadius.circular(10.0),
         border: Border.all(
           color: valueOrDefault<Color>(
-            widget.select == widget.title
+            widget!.select == widget!.title
                 ? FlutterFlowTheme.of(context).primary
                 : FlutterFlowTheme.of(context).secondaryBackground2,
             FlutterFlowTheme.of(context).secondaryBackground2,
@@ -61,7 +63,7 @@ class _FeedbackCardWidgetState extends State<FeedbackCardWidget> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -70,14 +72,14 @@ class _FeedbackCardWidgetState extends State<FeedbackCardWidget> {
               mainAxisSize: MainAxisSize.max,
               children: [
                 Image.network(
-                  widget.image!,
+                  widget!.image!,
                   width: 40.0,
                   height: 40.0,
                   fit: BoxFit.cover,
                 ),
                 Text(
                   valueOrDefault<String>(
-                    widget.title,
+                    widget!.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -88,9 +90,9 @@ class _FeedbackCardWidgetState extends State<FeedbackCardWidget> {
                         fontWeight: FontWeight.w500,
                       ),
                 ),
-              ].divide(const SizedBox(width: 16.0)),
+              ].divide(SizedBox(width: 16.0)),
             ),
-            if (widget.select == widget.title)
+            if (widget!.select == widget!.title)
               Container(
                 width: 24.0,
                 height: 24.0,
@@ -99,7 +101,7 @@ class _FeedbackCardWidgetState extends State<FeedbackCardWidget> {
                   shape: BoxShape.circle,
                 ),
                 child: Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Icon(
                     FFIcons.kcheck,
                     color: FlutterFlowTheme.of(context).primaryBackground2,
@@ -107,7 +109,7 @@ class _FeedbackCardWidgetState extends State<FeedbackCardWidget> {
                   ),
                 ),
               ),
-          ].divide(const SizedBox(width: 16.0)),
+          ].divide(SizedBox(width: 16.0)),
         ),
       ),
     );

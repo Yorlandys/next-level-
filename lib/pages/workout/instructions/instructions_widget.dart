@@ -1,7 +1,11 @@
 import '/components/resistance/resistance_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'instructions_model.dart';
 export 'instructions_model.dart';
 
@@ -48,7 +52,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -111,7 +115,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                                   fit: BoxFit.cover,
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 20.0)),
+                            ].divide(SizedBox(height: 20.0)),
                           ),
                           Row(
                             mainAxisSize: MainAxisSize.max,
@@ -147,7 +151,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                                             lineHeight: 1.3,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 16.0)),
+                                  ].divide(SizedBox(height: 16.0)),
                                 ),
                               ),
                             ],
@@ -186,7 +190,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                                             lineHeight: 1.3,
                                           ),
                                     ),
-                                  ].divide(const SizedBox(height: 16.0)),
+                                  ].divide(SizedBox(height: 16.0)),
                                 ),
                               ),
                             ],
@@ -215,16 +219,16 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                               wrapWithModel(
                                 model: _model.resistanceModel,
                                 updateCallback: () => safeSetState(() {}),
-                                child: const ResistanceWidget(),
+                                child: ResistanceWidget(),
                               ),
-                            ].divide(const SizedBox(height: 16.0)),
+                            ].divide(SizedBox(height: 16.0)),
                           ),
-                        ].divide(const SizedBox(height: 28.0)),
+                        ].divide(SizedBox(height: 28.0)),
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(height: 66.0))
-                      .addToEnd(const SizedBox(height: 32.0)),
+                      .addToStart(SizedBox(height: 66.0))
+                      .addToEnd(SizedBox(height: 32.0)),
                 ),
               ),
               Container(
@@ -235,7 +239,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                     BoxShadow(
                       blurRadius: 8.0,
                       color: FlutterFlowTheme.of(context).primaryBackground2,
-                      offset: const Offset(
+                      offset: Offset(
                         0.0,
                         2.0,
                       ),
@@ -244,7 +248,7 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -263,12 +267,12 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kchevronLeft,
                                   color: FlutterFlowTheme.of(context).info,
@@ -289,11 +293,11 @@ class _InstructionsWidgetState extends State<InstructionsWidget> {
                                   fontWeight: FontWeight.w600,
                                 ),
                           ),
-                        ].addToEnd(const SizedBox(width: 32.0)),
+                        ].addToEnd(SizedBox(width: 32.0)),
                       ),
                     ]
-                        .divide(const SizedBox(height: 20.0))
-                        .addToEnd(const SizedBox(height: 20.0)),
+                        .divide(SizedBox(height: 20.0))
+                        .addToEnd(SizedBox(height: 20.0)),
                   ),
                 ),
               ),

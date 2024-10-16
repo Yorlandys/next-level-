@@ -2,7 +2,10 @@ import '/components/category/category_widget.dart';
 import '/components/food_card3/food_card3_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'favorites_model.dart';
 export 'favorites_model.dart';
 
@@ -42,14 +45,14 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground2,
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(96.0),
+          preferredSize: Size.fromHeight(96.0),
           child: AppBar(
             backgroundColor: FlutterFlowTheme.of(context).primaryBackground2,
             automaticallyImplyLeading: false,
-            actions: const [],
+            actions: [],
             flexibleSpace: FlexibleSpaceBar(
               background: Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -68,12 +71,12 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                           child: Container(
                             width: 32.0,
                             height: 32.0,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: Color(0x67BDBDBD),
                               shape: BoxShape.circle,
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 FFIcons.kchevronLeft,
                                 color: FlutterFlowTheme.of(context).info,
@@ -102,7 +105,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                             context.pushNamed(
                               'FoodFilter',
                               extra: <String, dynamic>{
-                                kTransitionInfoKey: const TransitionInfo(
+                                kTransitionInfoKey: TransitionInfo(
                                   hasTransition: true,
                                   transitionType:
                                       PageTransitionType.rightToLeft,
@@ -114,12 +117,12 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                           child: Container(
                             width: 32.0,
                             height: 32.0,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: Color(0x67BDBDBD),
                               shape: BoxShape.circle,
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 FFIcons.kfilter,
                                 color: FlutterFlowTheme.of(context).info,
@@ -150,7 +153,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                                   letterSpacing: 0.0,
                                 ),
                         enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
+                          borderSide: BorderSide(
                             color: Colors.transparent,
                             width: 2.0,
                           ),
@@ -178,8 +181,8 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         filled: true,
-                        fillColor: const Color(0xFF052146),
-                        contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                        fillColor: Color(0xFF052146),
+                        contentPadding: EdgeInsetsDirectional.fromSTEB(
                             12.0, 12.0, 12.0, 12.0),
                         prefixIcon: Icon(
                           FFIcons.ksearch,
@@ -196,9 +199,9 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                           _model.textControllerValidator.asValidator(context),
                     ),
                   ]
-                      .divide(const SizedBox(height: 20.0))
-                      .addToStart(const SizedBox(height: 12.0))
-                      .addToEnd(const SizedBox(height: 12.0)),
+                      .divide(SizedBox(height: 20.0))
+                      .addToStart(SizedBox(height: 12.0))
+                      .addToEnd(SizedBox(height: 12.0)),
                 ),
               ),
             ),
@@ -214,7 +217,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Wrap(
                     spacing: 0.0,
                     runSpacing: 0.0,
@@ -234,7 +237,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                           context.pushNamed(
                             'SearchFood',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.leftToRight,
                                 duration: Duration(milliseconds: 200),
@@ -259,10 +262,10 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: GridView(
                     padding: EdgeInsets.zero,
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
                       crossAxisSpacing: 10.0,
                       mainAxisSpacing: 10.0,
@@ -275,7 +278,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                       wrapWithModel(
                         model: _model.foodCard3Model1,
                         updateCallback: () => safeSetState(() {}),
-                        child: const FoodCard3Widget(
+                        child: FoodCard3Widget(
                           cover:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/msxoe4spoo9c/f14.jpg',
                           title: 'Grilled Checken with Vegetables',
@@ -286,7 +289,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                       wrapWithModel(
                         model: _model.foodCard3Model2,
                         updateCallback: () => safeSetState(() {}),
-                        child: const FoodCard3Widget(
+                        child: FoodCard3Widget(
                           cover:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qzd8rtkxnjnp/f13.jpg',
                           title: 'Grilled Checken with Vegetables',
@@ -297,7 +300,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                       wrapWithModel(
                         model: _model.foodCard3Model3,
                         updateCallback: () => safeSetState(() {}),
-                        child: const FoodCard3Widget(
+                        child: FoodCard3Widget(
                           cover:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5pw96yyc36e2/f11.jpg',
                           title: 'Grilled Checken with Vegetables',
@@ -308,7 +311,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                       wrapWithModel(
                         model: _model.foodCard3Model4,
                         updateCallback: () => safeSetState(() {}),
-                        child: const FoodCard3Widget(
+                        child: FoodCard3Widget(
                           cover:
                               'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gxci59slamhc/f9.jpg',
                           title: 'Grilled Checken with Vegetables',
@@ -319,7 +322,7 @@ class _FavoritesWidgetState extends State<FavoritesWidget> {
                     ],
                   ),
                 ),
-              ].divide(const SizedBox(height: 16.0)),
+              ].divide(SizedBox(height: 16.0)),
             ),
           ),
         ),

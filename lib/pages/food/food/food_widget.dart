@@ -5,8 +5,13 @@ import '/components/top_categories/top_categories_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'food_model.dart';
 export 'food_model.dart';
 
@@ -49,8 +54,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, -1.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, -1.0),
+            end: Offset(1.0, 1.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -68,8 +73,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 100.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, -1.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, -1.0),
+            end: Offset(1.0, 1.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -106,8 +111,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -125,8 +130,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 900.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -144,8 +149,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 200.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -163,8 +168,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 250.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -182,8 +187,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 800.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -201,8 +206,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 250.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -220,8 +225,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -239,8 +244,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 700.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, 0.0),
-            end: const Offset(1.0, 1.0),
+            begin: Offset(0.0, 0.0),
+            end: Offset(1.0, 1.0),
           ),
         ],
       ),
@@ -258,8 +263,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -289,8 +294,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.easeInOutQuint,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-100.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-100.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -308,8 +313,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 1200.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, -100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, -100.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -327,8 +332,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 1300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, -100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, -100.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -346,8 +351,8 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
             curve: Curves.elasticOut,
             delay: 1400.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(0.0, -100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, -100.0),
+            end: Offset(0.0, 0.0),
           ),
         ],
       ),
@@ -396,7 +401,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                   context.pushNamed(
                     'Favorites',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.rightToLeft,
                         duration: Duration(milliseconds: 200),
@@ -407,15 +412,15 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                 child: Container(
                   width: 40.0,
                   height: 40.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0xFF0F4388),
                     shape: BoxShape.circle,
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
                       child: Icon(
                         FFIcons.kheart,
                         color: FlutterFlowTheme.of(context).info,
@@ -435,7 +440,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                   context.pushNamed(
                     'FoodFilter',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.rightToLeft,
                         duration: Duration(milliseconds: 200),
@@ -446,12 +451,12 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                 child: Container(
                   width: 40.0,
                   height: 40.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0xFF0F4388),
                     shape: BoxShape.circle,
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Icon(
                       Icons.filter_alt,
                       color: FlutterFlowTheme.of(context).info,
@@ -470,7 +475,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                   context.pushNamed(
                     'SearchFood',
                     extra: <String, dynamic>{
-                      kTransitionInfoKey: const TransitionInfo(
+                      kTransitionInfoKey: TransitionInfo(
                         hasTransition: true,
                         transitionType: PageTransitionType.rightToLeft,
                         duration: Duration(milliseconds: 200),
@@ -481,12 +486,12 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                 child: Container(
                   width: 40.0,
                   height: 40.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0xFF0F4388),
                     shape: BoxShape.circle,
                   ),
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Icon(
                       FFIcons.ksearch,
                       color: FlutterFlowTheme.of(context).info,
@@ -496,9 +501,9 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                 ),
               ).animateOnPageLoad(
                   animationsMap['containerOnPageLoadAnimation3']!),
-            ].divide(const SizedBox(width: 12.0)),
+            ].divide(SizedBox(width: 12.0)),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -533,7 +538,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCardModel1,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCardWidget(
+                            child: FoodCardWidget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/q2i6ggmzoaw4/f1.jpg',
                               title: 'Beef Taco-Stuffed potatoes',
@@ -545,7 +550,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCardModel2,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCardWidget(
+                            child: FoodCardWidget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/yt9imt4txnan/f2.jpg',
                               title: 'Beef Taco-Stuffed potatoes',
@@ -557,7 +562,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCardModel3,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCardWidget(
+                            child: FoodCardWidget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/bmtafktfmts2/f4.jpg',
                               title: 'Beef Taco-Stuffed potatoes',
@@ -568,7 +573,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCardModel4,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCardWidget(
+                            child: FoodCardWidget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/ove4yfnh14l0/f5.jpg',
                               title: 'Beef Taco-Stuffed potatoes',
@@ -579,7 +584,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCardModel5,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCardWidget(
+                            child: FoodCardWidget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/t5938uuordvf/f3.jpg',
                               title: 'Beef Taco-Stuffed potatoes',
@@ -590,7 +595,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCardModel6,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCardWidget(
+                            child: FoodCardWidget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5qzjqp76wlkp/f6.jpg',
                               title: 'Beef Taco-Stuffed potatoes',
@@ -599,12 +604,12 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(width: 12.0))
-                            .addToStart(const SizedBox(width: 16.0))
-                            .addToEnd(const SizedBox(width: 16.0)),
+                            .divide(SizedBox(width: 12.0))
+                            .addToStart(SizedBox(width: 16.0))
+                            .addToEnd(SizedBox(width: 16.0)),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 12.0)),
+                  ].divide(SizedBox(height: 12.0)),
                 ),
                 Column(
                   mainAxisSize: MainAxisSize.max,
@@ -625,10 +630,10 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                         animationsMap['iconTitleOnPageLoadAnimation2']!),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: GridView(
                         padding: EdgeInsets.zero,
-                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 3,
                           crossAxisSpacing: 8.0,
                           mainAxisSpacing: 8.0,
@@ -647,7 +652,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -659,7 +664,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel1,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/ma95oohwox84/c1.png',
                                 title: 'Breakfast',
@@ -676,7 +681,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -688,7 +693,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel2,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/1lbab5ucta84/c2.png',
                                 title: 'Lunch',
@@ -705,7 +710,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -717,7 +722,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel3,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/vb76e2a4t80z/c3.png',
                                 title: 'Dinner',
@@ -734,7 +739,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -746,7 +751,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel4,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gkrbqas69pqf/c4.png',
                                 title: 'Suger Free',
@@ -763,7 +768,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -775,7 +780,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel5,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/0qhpuzgptwp5/c5.png',
                                 title: 'Low Calories',
@@ -792,7 +797,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -804,7 +809,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel6,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/fkajl8bgzrqv/c6.png',
                                 title: 'Vegitarian',
@@ -821,7 +826,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -833,7 +838,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel7,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/xhq82odeqd6i/c7.png',
                                 title: 'Snack',
@@ -850,7 +855,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -862,7 +867,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel8,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/17cacqljb3nk/c8.png',
                                 title: 'Salad',
@@ -879,7 +884,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                               context.pushNamed(
                                 'ViewAll',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -891,7 +896,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             child: wrapWithModel(
                               model: _model.topCategoriesModel9,
                               updateCallback: () => safeSetState(() {}),
-                              child: const TopCategoriesWidget(
+                              child: TopCategoriesWidget(
                                 image:
                                     'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/wr91nm92yeam/c9.png',
                                 title: 'Soup',
@@ -902,7 +907,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                         ],
                       ),
                     ),
-                  ].divide(const SizedBox(height: 12.0)),
+                  ].divide(SizedBox(height: 12.0)),
                 ),
                 Column(
                   mainAxisSize: MainAxisSize.max,
@@ -917,7 +922,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                         context.pushNamed(
                           'ViewAll',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: const TransitionInfo(
+                            kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
@@ -942,7 +947,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -978,7 +983,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model1,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/ove4yfnh14l0/f5.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -989,7 +994,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model2,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/dr53xkapigz1/f8.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1000,7 +1005,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model3,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gxci59slamhc/f9.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1011,7 +1016,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model4,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5pw96yyc36e2/f11.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1022,7 +1027,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model5,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/a0fy254uiqjs/f10.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1033,7 +1038,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model6,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qzd8rtkxnjnp/f13.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1042,12 +1047,12 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(width: 12.0))
-                            .addToStart(const SizedBox(width: 16.0))
-                            .addToEnd(const SizedBox(width: 16.0)),
+                            .divide(SizedBox(width: 12.0))
+                            .addToStart(SizedBox(width: 16.0))
+                            .addToEnd(SizedBox(width: 16.0)),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 12.0)),
+                  ].divide(SizedBox(height: 12.0)),
                 ).animateOnPageLoad(
                     animationsMap['columnOnPageLoadAnimation']!),
                 Column(
@@ -1063,7 +1068,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                         context.pushNamed(
                           'ViewAll',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: const TransitionInfo(
+                            kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
@@ -1088,7 +1093,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -1124,7 +1129,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model7,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/dwv9bs6beegg/f12.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1135,7 +1140,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model8,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/msxoe4spoo9c/f14.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1146,7 +1151,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model9,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gxci59slamhc/f9.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1157,7 +1162,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model10,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5pw96yyc36e2/f11.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1168,7 +1173,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model11,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/a0fy254uiqjs/f10.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1179,7 +1184,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model12,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qzd8rtkxnjnp/f13.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1188,12 +1193,12 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(width: 12.0))
-                            .addToStart(const SizedBox(width: 16.0))
-                            .addToEnd(const SizedBox(width: 16.0)),
+                            .divide(SizedBox(width: 12.0))
+                            .addToStart(SizedBox(width: 16.0))
+                            .addToEnd(SizedBox(width: 16.0)),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 12.0)),
+                  ].divide(SizedBox(height: 12.0)),
                 ),
                 Column(
                   mainAxisSize: MainAxisSize.max,
@@ -1208,7 +1213,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                         context.pushNamed(
                           'ViewAll',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: const TransitionInfo(
+                            kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
@@ -1233,7 +1238,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -1269,7 +1274,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model13,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qzd8rtkxnjnp/f13.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1280,7 +1285,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model14,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/a0fy254uiqjs/f10.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1291,7 +1296,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model15,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gxci59slamhc/f9.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1302,7 +1307,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model16,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5pw96yyc36e2/f11.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1313,7 +1318,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model17,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/a0fy254uiqjs/f10.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1324,7 +1329,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model18,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qzd8rtkxnjnp/f13.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1333,12 +1338,12 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(width: 12.0))
-                            .addToStart(const SizedBox(width: 16.0))
-                            .addToEnd(const SizedBox(width: 16.0)),
+                            .divide(SizedBox(width: 12.0))
+                            .addToStart(SizedBox(width: 16.0))
+                            .addToEnd(SizedBox(width: 16.0)),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 12.0)),
+                  ].divide(SizedBox(height: 12.0)),
                 ),
                 Column(
                   mainAxisSize: MainAxisSize.max,
@@ -1353,7 +1358,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                         context.pushNamed(
                           'ViewAll',
                           extra: <String, dynamic>{
-                            kTransitionInfoKey: const TransitionInfo(
+                            kTransitionInfoKey: TransitionInfo(
                               hasTransition: true,
                               transitionType: PageTransitionType.rightToLeft,
                               duration: Duration(milliseconds: 200),
@@ -1378,7 +1383,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 12.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -1414,7 +1419,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model19,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5pw96yyc36e2/f11.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1425,7 +1430,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model20,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gxci59slamhc/f9.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1436,7 +1441,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model21,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gxci59slamhc/f9.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1447,7 +1452,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model22,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/5pw96yyc36e2/f11.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1458,7 +1463,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model23,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/a0fy254uiqjs/f10.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1469,7 +1474,7 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                           wrapWithModel(
                             model: _model.foodCard2Model24,
                             updateCallback: () => safeSetState(() {}),
-                            child: const FoodCard2Widget(
+                            child: FoodCard2Widget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/qzd8rtkxnjnp/f13.jpg',
                               title: 'Cottage cheese Pancakes',
@@ -1478,17 +1483,17 @@ class _FoodWidgetState extends State<FoodWidget> with TickerProviderStateMixin {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(width: 12.0))
-                            .addToStart(const SizedBox(width: 16.0))
-                            .addToEnd(const SizedBox(width: 16.0)),
+                            .divide(SizedBox(width: 12.0))
+                            .addToStart(SizedBox(width: 16.0))
+                            .addToEnd(SizedBox(width: 16.0)),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 12.0)),
+                  ].divide(SizedBox(height: 12.0)),
                 ),
               ]
-                  .divide(const SizedBox(height: 32.0))
-                  .addToStart(const SizedBox(height: 16.0))
-                  .addToEnd(const SizedBox(height: 32.0)),
+                  .divide(SizedBox(height: 32.0))
+                  .addToStart(SizedBox(height: 16.0))
+                  .addToEnd(SizedBox(height: 32.0)),
             ),
           ),
         ),

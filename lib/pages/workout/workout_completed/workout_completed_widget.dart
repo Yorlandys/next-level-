@@ -4,7 +4,10 @@ import '/components/review_exercise/review_exercise_widget.dart';
 import '/components/workout_performance/workout_performance_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'workout_completed_model.dart';
 export 'workout_completed_model.dart';
 
@@ -51,7 +54,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    Container(
                       height: 420.0,
                       child: Stack(
                         children: [
@@ -88,7 +91,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                           blurRadius: 120.0,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBackground2,
-                                          offset: const Offset(
+                                          offset: Offset(
                                             0.0,
                                             2.0,
                                           ),
@@ -104,11 +107,11 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                           Container(
                             width: double.infinity,
                             height: double.infinity,
-                            decoration: const BoxDecoration(
+                            decoration: BoxDecoration(
                               color: Color(0x9A083168),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 20.0, 16.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
@@ -120,13 +123,13 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       Container(
                                         height: 30.0,
                                         decoration: BoxDecoration(
-                                          color: const Color(0x33FFFFFF),
+                                          color: Color(0x33FFFFFF),
                                           borderRadius:
                                               BorderRadius.circular(50.0),
                                         ),
                                         child: Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   16.0, 0.0, 16.0, 0.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -153,7 +156,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                                               FontWeight.w500,
                                                         ),
                                               ),
-                                            ].divide(const SizedBox(width: 6.0)),
+                                            ].divide(SizedBox(width: 6.0)),
                                           ),
                                         ),
                                       ),
@@ -279,8 +282,8 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                           ),
                                         ),
                                       ]
-                                          .addToStart(const SizedBox(width: 12.0))
-                                          .addToEnd(const SizedBox(width: 12.0)),
+                                          .addToStart(SizedBox(width: 12.0))
+                                          .addToEnd(SizedBox(width: 12.0)),
                                     ),
                                   ),
                                   Container(
@@ -300,7 +303,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       children: [
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   14.0, 14.0, 0.0, 0.0),
                                           child: Text(
                                             'How was your workout?',
@@ -319,8 +322,8 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                         ),
                                         Container(
                                           height: 26.0,
-                                          decoration: const BoxDecoration(),
-                                          child: SizedBox(
+                                          decoration: BoxDecoration(),
+                                          child: Container(
                                             width: double.infinity,
                                             child: Slider(
                                               activeColor:
@@ -344,7 +347,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                         ),
                                         Padding(
                                           padding:
-                                              const EdgeInsetsDirectional.fromSTEB(
+                                              EdgeInsetsDirectional.fromSTEB(
                                                   14.0, 0.0, 14.0, 14.0),
                                           child: Row(
                                             mainAxisSize: MainAxisSize.max,
@@ -370,7 +373,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                               Expanded(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           0.0, 0.0),
                                                   child: Text(
                                                     'Perfect',
@@ -390,7 +393,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                               Expanded(
                                                 child: Align(
                                                   alignment:
-                                                      const AlignmentDirectional(
+                                                      AlignmentDirectional(
                                                           1.0, 0.0),
                                                   child: Text(
                                                     'Hard',
@@ -413,7 +416,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       ],
                                     ),
                                   ),
-                                ].divide(const SizedBox(height: 20.0)),
+                                ].divide(SizedBox(height: 20.0)),
                               ),
                             ),
                           ),
@@ -422,13 +425,13 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 6.0),
                             child: Text(
                               'Review exercises',
@@ -453,7 +456,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -462,7 +465,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -480,7 +483,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -489,7 +492,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -507,7 +510,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -516,7 +519,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -534,7 +537,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -543,7 +546,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -561,7 +564,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -570,7 +573,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -588,7 +591,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -597,7 +600,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -615,7 +618,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -624,7 +627,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -642,7 +645,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -651,7 +654,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -669,7 +672,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -678,7 +681,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -696,7 +699,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -705,7 +708,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -723,7 +726,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -732,7 +735,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -750,7 +753,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               popup: () async {
                                 showModalBottomSheet(
                                   isScrollControlled: true,
-                                  backgroundColor: const Color(0x34000000),
+                                  backgroundColor: Color(0x34000000),
                                   context: context,
                                   builder: (context) {
                                     return GestureDetector(
@@ -759,7 +762,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                                       child: Padding(
                                         padding:
                                             MediaQuery.viewInsetsOf(context),
-                                        child: const ExerciseFeedbackWidget(),
+                                        child: ExerciseFeedbackWidget(),
                                       ),
                                     );
                                   },
@@ -767,18 +770,18 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                               },
                             ),
                           ),
-                        ].divide(const SizedBox(height: 12.0)),
+                        ].divide(SizedBox(height: 12.0)),
                       ),
                     ),
                   ]
-                      .divide(const SizedBox(height: 24.0))
-                      .addToEnd(const SizedBox(height: 100.0)),
+                      .divide(SizedBox(height: 24.0))
+                      .addToEnd(SizedBox(height: 100.0)),
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).primaryBackground2,
@@ -787,7 +790,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                           blurRadius: 20.0,
                           color:
                               FlutterFlowTheme.of(context).primaryBackground2,
-                          offset: const Offset(
+                          offset: Offset(
                             0.0,
                             2.0,
                           ),
@@ -797,7 +800,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                     ),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 8.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -807,7 +810,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                           context.pushNamed(
                             'Workouts',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
                                 duration: Duration(milliseconds: 200),
@@ -818,7 +821,7 @@ class _WorkoutCompletedWidgetState extends State<WorkoutCompletedWidget> {
                         child: wrapWithModel(
                           model: _model.customButtonModel,
                           updateCallback: () => safeSetState(() {}),
-                          child: const CustomButtonWidget(
+                          child: CustomButtonWidget(
                             title: 'Continue',
                           ),
                         ),

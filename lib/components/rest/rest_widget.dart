@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'rest_model.dart';
 export 'rest_model.dart';
 
@@ -36,7 +38,7 @@ class _RestWidgetState extends State<RestWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -65,7 +67,7 @@ class _RestWidgetState extends State<RestWidget> {
               color: FlutterFlowTheme.of(context).bgColor,
             ),
           ),
-        ].divide(const SizedBox(width: 16.0)),
+        ].divide(SizedBox(width: 16.0)),
       ),
     );
   }

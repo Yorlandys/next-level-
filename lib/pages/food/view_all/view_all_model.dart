@@ -1,8 +1,12 @@
 import '/components/category/category_widget.dart';
 import '/components/food_card3/food_card3_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'view_all_widget.dart' show ViewAllWidget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ViewAllModel extends FlutterFlowModel<ViewAllWidget> {
   ///  State fields for stateful widgets in this page.

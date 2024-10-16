@@ -2,9 +2,14 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'your_weight_model.dart';
 export 'your_weight_model.dart';
 
@@ -42,8 +47,8 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
             curve: Curves.easeInOutQuint,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -76,7 +81,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,7 +106,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                               shape: BoxShape.circle,
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 FFIcons.kchevronLeft,
                                 color: FlutterFlowTheme.of(context).primaryText,
@@ -124,7 +129,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -141,13 +146,13 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                 ),
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation']!),
-                        ].divide(const SizedBox(height: 4.0)),
+                        ].divide(SizedBox(height: 4.0)),
                       ),
                     ),
                     Expanded(
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -156,7 +161,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                             Builder(
                               builder: (context) {
                                 if (_model.type == 'ft & in') {
-                                  return SizedBox(
+                                  return Container(
                                     width: double.infinity,
                                     child: TextFormField(
                                       controller: _model.textController1,
@@ -194,7 +199,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                         errorBorder: InputBorder.none,
                                         focusedErrorBorder: InputBorder.none,
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 1.0, 0.0, 1.0, 0.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -214,7 +219,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                     ),
                                   );
                                 } else {
-                                  return SizedBox(
+                                  return Container(
                                     width: double.infinity,
                                     child: TextFormField(
                                       controller: _model.textController2,
@@ -249,7 +254,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                         errorBorder: InputBorder.none,
                                         focusedErrorBorder: InputBorder.none,
                                         contentPadding:
-                                            const EdgeInsetsDirectional.fromSTEB(
+                                            EdgeInsetsDirectional.fromSTEB(
                                                 1.0, 0.0, 1.0, 0.0),
                                       ),
                                       style: FlutterFlowTheme.of(context)
@@ -279,7 +284,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                 borderRadius: BorderRadius.circular(50.0),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(2.0),
+                                padding: EdgeInsets.all(2.0),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   children: [
@@ -311,7 +316,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Text(
                                               'kg',
                                               style:
@@ -357,7 +362,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                           ),
                                           child: Align(
                                             alignment:
-                                                const AlignmentDirectional(0.0, 0.0),
+                                                AlignmentDirectional(0.0, 0.0),
                                             child: Text(
                                               'lbs',
                                               style:
@@ -383,7 +388,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 0.0, 0.0),
                                   child: RichText(
                                     textScaler:
@@ -432,28 +437,28 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                               ],
                             ),
                           ]
-                              .divide(const SizedBox(height: 32.0))
-                              .addToStart(const SizedBox(height: 1.0))
-                              .addToEnd(const SizedBox(height: 50.0)),
+                              .divide(SizedBox(height: 32.0))
+                              .addToStart(SizedBox(height: 1.0))
+                              .addToEnd(SizedBox(height: 50.0)),
                         ),
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(height: 24.0))
-                      .addToEnd(const SizedBox(height: 24.0)),
+                      .addToStart(SizedBox(height: 24.0))
+                      .addToEnd(SizedBox(height: 24.0)),
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 24.0),
+                      EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 24.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(
                         'Suffer',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 200),
@@ -466,9 +471,9 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                       width: double.infinity,
                       height: 44.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -479,7 +484,7 @@ class _YourWeightWidgetState extends State<YourWeightWidget>
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

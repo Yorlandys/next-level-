@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'goal_model.dart';
 export 'goal_model.dart';
 
@@ -45,18 +47,18 @@ class _GoalWidgetState extends State<GoalWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         children: [
-          widget.icon!,
+          widget!.icon!,
           Column(
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget.title,
+                  widget!.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -68,7 +70,7 @@ class _GoalWidgetState extends State<GoalWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget.subtitle,
+                  widget!.subtitle,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -78,9 +80,9 @@ class _GoalWidgetState extends State<GoalWidget> {
                       fontWeight: FontWeight.bold,
                     ),
               ),
-            ].divide(const SizedBox(height: 4.0)),
+            ].divide(SizedBox(height: 4.0)),
           ),
-        ].divide(const SizedBox(width: 20.0)),
+        ].divide(SizedBox(width: 20.0)),
       ),
     );
   }

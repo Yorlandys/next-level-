@@ -1,9 +1,14 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'pushups_model.dart';
 export 'pushups_model.dart';
 
@@ -35,8 +40,8 @@ class _PushupsWidgetState extends State<PushupsWidget>
             curve: Curves.easeInOutQuint,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -54,8 +59,8 @@ class _PushupsWidgetState extends State<PushupsWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -73,8 +78,8 @@ class _PushupsWidgetState extends State<PushupsWidget>
             curve: Curves.easeInOut,
             delay: 300.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -92,8 +97,8 @@ class _PushupsWidgetState extends State<PushupsWidget>
             curve: Curves.easeInOut,
             delay: 400.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -111,8 +116,8 @@ class _PushupsWidgetState extends State<PushupsWidget>
             curve: Curves.easeInOut,
             delay: 500.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -143,7 +148,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -168,7 +173,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                           shape: BoxShape.circle,
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Icon(
                             FFIcons.kchevronLeft,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -189,7 +194,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -205,11 +210,11 @@ class _PushupsWidgetState extends State<PushupsWidget>
                             ),
                       ).animateOnPageLoad(
                           animationsMap['textOnPageLoadAnimation']!),
-                    ].divide(const SizedBox(height: 6.0)),
+                    ].divide(SizedBox(height: 6.0)),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -227,7 +232,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                           context.pushNamed(
                             'WalkDaily',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
                                 duration: Duration(milliseconds: 200),
@@ -257,7 +262,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -277,7 +282,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                   ),
                                   if (_model.gender == 'Female')
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         width: 24.0,
@@ -289,7 +294,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kcheck,
                                             color: FlutterFlowTheme.of(context)
@@ -320,7 +325,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                           context.pushNamed(
                             'WalkDaily',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
                                 duration: Duration(milliseconds: 200),
@@ -350,7 +355,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -370,7 +375,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                   ),
                                   if (_model.gender == 'Male')
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         width: 24.0,
@@ -382,7 +387,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kcheck,
                                             color: FlutterFlowTheme.of(context)
@@ -413,7 +418,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                           context.pushNamed(
                             'WalkDaily',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
                                 duration: Duration(milliseconds: 200),
@@ -443,7 +448,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -463,7 +468,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                   ),
                                   if (_model.gender == 'Flabby')
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         width: 24.0,
@@ -475,7 +480,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kcheck,
                                             color: FlutterFlowTheme.of(context)
@@ -506,7 +511,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                           context.pushNamed(
                             'WalkDaily',
                             extra: <String, dynamic>{
-                              kTransitionInfoKey: const TransitionInfo(
+                              kTransitionInfoKey: TransitionInfo(
                                 hasTransition: true,
                                 transitionType: PageTransitionType.rightToLeft,
                                 duration: Duration(milliseconds: 200),
@@ -536,7 +541,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -556,7 +561,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                   ),
                                   if (_model.gender == 'Heavier')
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         width: 24.0,
@@ -568,7 +573,7 @@ class _PushupsWidgetState extends State<PushupsWidget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kcheck,
                                             color: FlutterFlowTheme.of(context)
@@ -585,12 +590,12 @@ class _PushupsWidgetState extends State<PushupsWidget>
                         ),
                       ).animateOnPageLoad(
                           animationsMap['containerOnPageLoadAnimation4']!),
-                    ].divide(const SizedBox(height: 8.0)),
+                    ].divide(SizedBox(height: 8.0)),
                   ),
                 ),
               ]
-                  .addToStart(const SizedBox(height: 24.0))
-                  .addToEnd(const SizedBox(height: 24.0)),
+                  .addToStart(SizedBox(height: 24.0))
+                  .addToEnd(SizedBox(height: 24.0)),
             ),
           ),
         ),

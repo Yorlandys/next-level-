@@ -1,9 +1,13 @@
 import '/components/result/result_widget.dart';
 import '/components/user_review/user_review_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'subscription_widget.dart' show SubscriptionWidget;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class SubscriptionModel extends FlutterFlowModel<SubscriptionWidget> {
   ///  Local state fields for this page.

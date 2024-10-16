@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'settings_card2_model.dart';
 export 'settings_card2_model.dart';
 
@@ -50,7 +52,7 @@ class _SettingsCard2WidgetState extends State<SettingsCard2Widget> {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,10 +60,10 @@ class _SettingsCard2WidgetState extends State<SettingsCard2Widget> {
             Row(
               mainAxisSize: MainAxisSize.max,
               children: [
-                widget.icon!,
+                widget!.icon!,
                 Text(
                   valueOrDefault<String>(
-                    widget.title,
+                    widget!.title,
                     'na',
                   ),
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -72,7 +74,7 @@ class _SettingsCard2WidgetState extends State<SettingsCard2Widget> {
                         fontWeight: FontWeight.w600,
                       ),
                 ),
-              ].divide(const SizedBox(width: 12.0)),
+              ].divide(SizedBox(width: 12.0)),
             ),
             Icon(
               Icons.chevron_right_rounded,

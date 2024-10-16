@@ -4,7 +4,10 @@ import '/components/modals/training_days/training_days_widget.dart';
 import '/components/settings_menu_btn/settings_menu_btn_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'reminders_model.dart';
 export 'reminders_model.dart';
 
@@ -45,13 +48,13 @@ class _RemindersWidgetState extends State<RemindersWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, -1.0),
+                alignment: AlignmentDirectional(0.0, -1.0),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 0.0),
+                      EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 0.0),
                   child: Container(
                     height: 34.0,
-                    decoration: const BoxDecoration(),
+                    decoration: BoxDecoration(),
                   ),
                 ),
               ),
@@ -61,7 +64,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 20.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
@@ -71,7 +74,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Align(
-                                alignment: const AlignmentDirectional(-1.0, 0.0),
+                                alignment: AlignmentDirectional(-1.0, 0.0),
                                 child: InkWell(
                                   splashColor: Colors.transparent,
                                   focusColor: Colors.transparent,
@@ -83,12 +86,12 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                   child: Container(
                                     width: 32.0,
                                     height: 32.0,
-                                    decoration: const BoxDecoration(
+                                    decoration: BoxDecoration(
                                       color: Color(0x67BDBDBD),
                                       shape: BoxShape.circle,
                                     ),
                                     child: Align(
-                                      alignment: const AlignmentDirectional(0.0, 0.0),
+                                      alignment: AlignmentDirectional(0.0, 0.0),
                                       child: Icon(
                                         FFIcons.kchevronLeft,
                                         color:
@@ -101,9 +104,9 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   child: Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 32.0, 0.0),
                                     child: Text(
                                       'Reminders',
@@ -144,7 +147,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           16.0, 0.0, 12.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -177,9 +180,9 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                                               FontWeight.w600,
                                                         ),
                                                   ),
-                                                ].divide(const SizedBox(height: 4.0)),
+                                                ].divide(SizedBox(height: 4.0)),
                                               ),
-                                            ].divide(const SizedBox(width: 12.0)),
+                                            ].divide(SizedBox(width: 12.0)),
                                           ),
                                           wrapWithModel(
                                             model: _model.customSwitchModel,
@@ -209,7 +212,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                     onTap: () async {
                                       showModalBottomSheet(
                                         isScrollControlled: true,
-                                        backgroundColor: const Color(0x34000000),
+                                        backgroundColor: Color(0x34000000),
                                         context: context,
                                         builder: (context) {
                                           return GestureDetector(
@@ -218,7 +221,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                             child: Padding(
                                               padding: MediaQuery.viewInsetsOf(
                                                   context),
-                                              child: const TrainingDaysWidget(),
+                                              child: TrainingDaysWidget(),
                                             ),
                                           );
                                         },
@@ -227,7 +230,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                     child: wrapWithModel(
                                       model: _model.settingsMenuBtnModel1,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const SettingsMenuBtnWidget(
+                                      child: SettingsMenuBtnWidget(
                                         title: 'Days',
                                         subtitle: ' ',
                                       ),
@@ -249,7 +252,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                       highlightColor: Colors.transparent,
                                       onTap: () async {
                                         showDialog(
-                                          barrierColor: const Color(0x4D000000),
+                                          barrierColor: Color(0x4D000000),
                                           context: context,
                                           builder: (dialogContext) {
                                             return Dialog(
@@ -258,7 +261,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                               backgroundColor:
                                                   Colors.transparent,
                                               alignment:
-                                                  const AlignmentDirectional(0.0, 0.0)
+                                                  AlignmentDirectional(0.0, 0.0)
                                                       .resolve(
                                                           Directionality.of(
                                                               context)),
@@ -266,7 +269,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                                 onTap: () =>
                                                     FocusScope.of(dialogContext)
                                                         .unfocus(),
-                                                child: const SetDurationWidget(),
+                                                child: SetDurationWidget(),
                                               ),
                                             );
                                           },
@@ -276,7 +279,7 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                                         model: _model.settingsMenuBtnModel2,
                                         updateCallback: () =>
                                             safeSetState(() {}),
-                                        child: const SettingsMenuBtnWidget(
+                                        child: SettingsMenuBtnWidget(
                                           title: 'Time',
                                           subtitle: '0',
                                         ),
@@ -288,8 +291,8 @@ class _RemindersWidgetState extends State<RemindersWidget> {
                             ),
                           ),
                         ]
-                            .divide(const SizedBox(height: 24.0))
-                            .addToEnd(const SizedBox(height: 32.0)),
+                            .divide(SizedBox(height: 24.0))
+                            .addToEnd(SizedBox(height: 32.0)),
                       ),
                     ),
                   ],

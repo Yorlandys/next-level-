@@ -1,10 +1,14 @@
 import '/components/exercise_details_2/exercise_details2_widget.dart';
 import '/components/rest/rest_widget.dart';
 import '/components/workout/workout_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'view_list_widget.dart' show ViewListWidget;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ViewListModel extends FlutterFlowModel<ViewListWidget> {
   ///  Local state fields for this page.

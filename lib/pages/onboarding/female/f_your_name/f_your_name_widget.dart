@@ -2,9 +2,13 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'f_your_name_model.dart';
 export 'f_your_name_model.dart';
 
@@ -39,8 +43,8 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
             curve: Curves.easeInOutQuint,
             delay: 300.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -73,7 +77,7 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
           child: Stack(
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,7 +102,7 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
                               shape: BoxShape.circle,
                             ),
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: Icon(
                                 FFIcons.kchevronLeft,
                                 color: FlutterFlowTheme.of(context).primaryText,
@@ -121,7 +125,7 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -138,19 +142,19 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
                                 ),
                           ).animateOnPageLoad(
                               animationsMap['textOnPageLoadAnimation']!),
-                        ].divide(const SizedBox(height: 4.0)),
+                        ].divide(SizedBox(height: 4.0)),
                       ),
                     ),
                     Expanded(
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 0.0, 0.0, 60.0),
                               child: TextFormField(
                                 controller: _model.textController,
@@ -182,7 +186,7 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
                                   errorBorder: InputBorder.none,
                                   focusedErrorBorder: InputBorder.none,
                                   contentPadding:
-                                      const EdgeInsetsDirectional.fromSTEB(
+                                      EdgeInsetsDirectional.fromSTEB(
                                           16.0, 50.0, 16.0, 50.0),
                                 ),
                                 style: FlutterFlowTheme.of(context)
@@ -199,28 +203,28 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
                               ),
                             ),
                           ]
-                              .divide(const SizedBox(height: 8.0))
-                              .addToStart(const SizedBox(height: 1.0))
-                              .addToEnd(const SizedBox(height: 50.0)),
+                              .divide(SizedBox(height: 8.0))
+                              .addToStart(SizedBox(height: 1.0))
+                              .addToEnd(SizedBox(height: 50.0)),
                         ),
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(height: 24.0))
-                      .addToEnd(const SizedBox(height: 24.0)),
+                      .addToStart(SizedBox(height: 24.0))
+                      .addToEnd(SizedBox(height: 24.0)),
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
                   padding:
-                      const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 24.0),
+                      EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 24.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(
                         'F_YourGoal',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 200),
@@ -233,9 +237,9 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
                       width: double.infinity,
                       height: 44.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -246,7 +250,7 @@ class _FYourNameWidgetState extends State<FYourNameWidget>
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),

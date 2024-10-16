@@ -1,8 +1,14 @@
+import '/components/modals/popup/quitworkout/quitworkout_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'exercies_start_widget.dart' show ExerciesStartWidget;
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class ExerciesStartModel extends FlutterFlowModel<ExerciesStartWidget> {
   ///  State fields for stateful widgets in this page.

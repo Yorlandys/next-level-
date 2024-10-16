@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'exercise_card2_model.dart';
 export 'exercise_card2_model.dart';
 
@@ -51,7 +53,7 @@ class _ExerciseCard2WidgetState extends State<ExerciseCard2Widget> {
         context.pushNamed(
           'ExerciseDetails',
           extra: <String, dynamic>{
-            kTransitionInfoKey: const TransitionInfo(
+            kTransitionInfoKey: TransitionInfo(
               hasTransition: true,
               transitionType: PageTransitionType.rightToLeft,
               duration: Duration(milliseconds: 200),
@@ -66,7 +68,7 @@ class _ExerciseCard2WidgetState extends State<ExerciseCard2Widget> {
           color: FlutterFlowTheme.of(context).secondaryBackground2,
         ),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,14 +77,14 @@ class _ExerciseCard2WidgetState extends State<ExerciseCard2Widget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Image.network(
-                    widget.icon!,
+                    widget!.icon!,
                     width: 30.0,
                     height: 30.0,
                     fit: BoxFit.cover,
                   ),
                   Text(
                     valueOrDefault<String>(
-                      widget.title,
+                      widget!.title,
                       'na',
                     ),
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -93,7 +95,7 @@ class _ExerciseCard2WidgetState extends State<ExerciseCard2Widget> {
                           fontWeight: FontWeight.w600,
                         ),
                   ),
-                ].divide(const SizedBox(width: 12.0)),
+                ].divide(SizedBox(width: 12.0)),
               ),
               Icon(
                 Icons.chevron_right_rounded,

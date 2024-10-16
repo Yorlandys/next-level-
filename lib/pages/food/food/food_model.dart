@@ -2,9 +2,17 @@ import '/components/food_card/food_card_widget.dart';
 import '/components/food_card2/food_card2_widget.dart';
 import '/components/icon_title/icon_title_widget.dart';
 import '/components/top_categories/top_categories_widget.dart';
+import '/flutter_flow/flutter_flow_animations.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'food_widget.dart' show FoodWidget;
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class FoodModel extends FlutterFlowModel<FoodWidget> {
   ///  State fields for stateful widgets in this page.

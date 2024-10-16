@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'title_model.dart';
 export 'title_model.dart';
 
@@ -43,16 +45,16 @@ class _TitleWidgetState extends State<TitleWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               valueOrDefault<String>(
-                widget.title,
+                widget!.title,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -65,7 +67,7 @@ class _TitleWidgetState extends State<TitleWidget> {
             ),
             Text(
               valueOrDefault<String>(
-                widget.subtitle,
+                widget!.subtitle,
                 'na',
               ),
               maxLines: 2,
@@ -77,7 +79,7 @@ class _TitleWidgetState extends State<TitleWidget> {
                     lineHeight: 1.4,
                   ),
             ),
-          ].divide(const SizedBox(height: 6.0)),
+          ].divide(SizedBox(height: 6.0)),
         ),
       ),
     );

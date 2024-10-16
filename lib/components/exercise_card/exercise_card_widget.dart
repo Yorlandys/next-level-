@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'exercise_card_model.dart';
 export 'exercise_card_model.dart';
 
@@ -12,7 +14,7 @@ class ExerciseCardWidget extends StatefulWidget {
     required this.subtitle,
     required this.icon2,
     bool? download,
-  }) : download = download ?? false;
+  }) : this.download = download ?? false;
 
   final Widget? icon;
   final String? title;
@@ -65,7 +67,7 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
           borderRadius: BorderRadius.circular(10.0),
         ),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 12.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -73,7 +75,7 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  widget.icon!,
+                  widget!.icon!,
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +86,7 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
                         children: [
                           Text(
                             valueOrDefault<String>(
-                              widget.title,
+                              widget!.title,
                               'na',
                             ),
                             style: FlutterFlowTheme.of(context)
@@ -97,7 +99,7 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
                                   fontWeight: FontWeight.w600,
                                 ),
                           ),
-                          if (widget.download == true)
+                          if (widget!.download == true)
                             Container(
                               width: 18.0,
                               height: 18.0,
@@ -106,7 +108,7 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kcheck,
                                   color: FlutterFlowTheme.of(context).bgColor,
@@ -114,11 +116,11 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
                                 ),
                               ),
                             ),
-                        ].divide(const SizedBox(width: 8.0)),
+                        ].divide(SizedBox(width: 8.0)),
                       ),
                       Text(
                         valueOrDefault<String>(
-                          widget.subtitle,
+                          widget!.subtitle,
                           'na',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -129,9 +131,9 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
                               fontWeight: FontWeight.normal,
                             ),
                       ),
-                    ].divide(const SizedBox(height: 4.0)),
+                    ].divide(SizedBox(height: 4.0)),
                   ),
-                ].divide(const SizedBox(width: 12.0)),
+                ].divide(SizedBox(width: 12.0)),
               ),
               Builder(
                 builder: (context) {
@@ -142,7 +144,7 @@ class _ExerciseCardWidgetState extends State<ExerciseCardWidget> {
                       size: 24.0,
                     );
                   } else {
-                    return widget.icon2!;
+                    return widget!.icon2!;
                   }
                 },
               ),

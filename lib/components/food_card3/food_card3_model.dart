@@ -1,7 +1,11 @@
 import '/components/custom_btn/custom_btn_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'food_card3_widget.dart' show FoodCard3Widget;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 class FoodCard3Model extends FlutterFlowModel<FoodCard3Widget> {
   ///  Local state fields for this component.

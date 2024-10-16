@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'top_categories_model.dart';
 export 'top_categories_model.dart';
 
@@ -50,20 +52,20 @@ class _TopCategoriesWidgetState extends State<TopCategoriesWidget> {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(6.0),
+        padding: EdgeInsets.all(6.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.network(
-              widget.image!,
+              widget!.image!,
               width: 26.0,
               height: 26.0,
               fit: BoxFit.cover,
             ),
             Text(
               valueOrDefault<String>(
-                widget.title,
+                widget!.title,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(

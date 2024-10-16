@@ -2,9 +2,13 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'm_part_focus_model.dart';
 export 'm_part_focus_model.dart';
 
@@ -36,8 +40,8 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
             curve: Curves.easeInOutQuint,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -68,7 +72,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,7 +97,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                           shape: BoxShape.circle,
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Icon(
                             FFIcons.kchevronLeft,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -114,7 +118,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -130,7 +134,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                             ),
                       ).animateOnPageLoad(
                           animationsMap['textOnPageLoadAnimation']!),
-                    ].divide(const SizedBox(height: 6.0)),
+                    ].divide(SizedBox(height: 6.0)),
                   ),
                 ),
                 Expanded(
@@ -145,12 +149,12 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                         children: [
                           Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: SizedBox(
+                              alignment: AlignmentDirectional(0.0, 0.0),
+                              child: Container(
                                 width: 180.0,
                                 height: 370.0,
                                 child: Stack(
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.0, 0.0),
                                   children: [
                                     ClipRRect(
                                       borderRadius: BorderRadius.circular(8.0),
@@ -163,12 +167,12 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                     if (_model.things)
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.36, 0.47),
+                                            AlignmentDirectional(0.36, 0.47),
                                         child: Container(
                                           width: 50.0,
                                           height: 50.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0x4D007AFF),
+                                            color: Color(0x4D007AFF),
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               color:
@@ -178,18 +182,18 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                             ),
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(1.0, 1.0),
+                                              AlignmentDirectional(1.0, 1.0),
                                         ),
                                       ),
                                     if (_model.arms)
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-0.79, -0.3),
+                                            AlignmentDirectional(-0.79, -0.3),
                                         child: Container(
                                           width: 50.0,
                                           height: 50.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0x4D007AFF),
+                                            color: Color(0x4D007AFF),
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               color:
@@ -199,18 +203,18 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                             ),
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(1.0, 1.0),
+                                              AlignmentDirectional(1.0, 1.0),
                                         ),
                                       ),
                                     if (_model.chest)
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(0.33, -0.28),
+                                            AlignmentDirectional(0.33, -0.28),
                                         child: Container(
                                           width: 50.0,
                                           height: 50.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0x4D007AFF),
+                                            color: Color(0x4D007AFF),
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               color:
@@ -220,18 +224,18 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                             ),
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(1.0, 1.0),
+                                              AlignmentDirectional(1.0, 1.0),
                                         ),
                                       ),
                                     if (_model.belly)
                                       Align(
                                         alignment:
-                                            const AlignmentDirectional(-0.18, 0.05),
+                                            AlignmentDirectional(-0.18, 0.05),
                                         child: Container(
                                           width: 50.0,
                                           height: 50.0,
                                           decoration: BoxDecoration(
-                                            color: const Color(0x4D007AFF),
+                                            color: Color(0x4D007AFF),
                                             shape: BoxShape.circle,
                                             border: Border.all(
                                               color:
@@ -241,7 +245,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                             ),
                                           ),
                                           alignment:
-                                              const AlignmentDirectional(1.0, 1.0),
+                                              AlignmentDirectional(1.0, 1.0),
                                         ),
                                       ),
                                   ],
@@ -250,7 +254,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 8.0, 0.0, 0.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.max,
@@ -285,7 +289,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 12.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -335,7 +339,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Icon(
                                                 FFIcons.kcheck,
@@ -381,7 +385,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 12.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -431,7 +435,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Icon(
                                                 FFIcons.kcheck,
@@ -477,7 +481,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 12.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -527,7 +531,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Icon(
                                                 FFIcons.kcheck,
@@ -573,7 +577,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                       ),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 12.0, 0.0),
                                       child: Row(
                                         mainAxisSize: MainAxisSize.max,
@@ -623,7 +627,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                               ),
                                             ),
                                             child: Align(
-                                              alignment: const AlignmentDirectional(
+                                              alignment: AlignmentDirectional(
                                                   0.0, 0.0),
                                               child: Icon(
                                                 FFIcons.kcheck,
@@ -639,22 +643,22 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                     ),
                                   ),
                                 ),
-                              ].divide(const SizedBox(height: 16.0)),
+                              ].divide(SizedBox(height: 16.0)),
                             ),
                           ),
-                        ].divide(const SizedBox(width: 12.0)),
+                        ].divide(SizedBox(width: 12.0)),
                       ),
                     ],
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 1.0),
+                  alignment: AlignmentDirectional(0.0, 1.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(
                         'Experience',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 200),
@@ -667,9 +671,9 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                       width: double.infinity,
                       height: 44.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -680,7 +684,7 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),
@@ -689,8 +693,8 @@ class _MPartFocusWidgetState extends State<MPartFocusWidget>
                   ),
                 ),
               ]
-                  .addToStart(const SizedBox(height: 24.0))
-                  .addToEnd(const SizedBox(height: 24.0)),
+                  .addToStart(SizedBox(height: 24.0))
+                  .addToEnd(SizedBox(height: 24.0)),
             ),
           ),
         ),

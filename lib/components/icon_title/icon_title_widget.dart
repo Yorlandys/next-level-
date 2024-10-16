@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'icon_title_model.dart';
 export 'icon_title_model.dart';
 
@@ -43,15 +45,15 @@ class _IconTitleWidgetState extends State<IconTitleWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Padding(
-        padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+        padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(
               valueOrDefault<String>(
-                widget.title,
+                widget!.title,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -62,8 +64,8 @@ class _IconTitleWidgetState extends State<IconTitleWidget> {
                     fontWeight: FontWeight.w500,
                   ),
             ),
-            widget.icon!,
-          ].divide(const SizedBox(width: 8.0)),
+            widget!.icon!,
+          ].divide(SizedBox(width: 8.0)),
         ),
       ),
     );

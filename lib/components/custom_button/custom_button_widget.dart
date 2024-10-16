@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'custom_button_model.dart';
 export 'custom_button_model.dart';
 
@@ -43,12 +45,6 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget> {
     return MouseRegion(
       opaque: false,
       cursor: MouseCursor.defer ?? MouseCursor.defer,
-      onEnter: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = true);
-      }),
-      onExit: ((event) async {
-        safeSetState(() => _model.mouseRegionHovered = false);
-      }),
       child: Container(
         width: double.infinity,
         height: 44.0,
@@ -56,24 +52,24 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget> {
           gradient: LinearGradient(
             colors: [
               valueOrDefault<Color>(
-                _model.mouseRegionHovered
+                _model.mouseRegionHovered!
                     ? FlutterFlowTheme.of(context).primary
                     : FlutterFlowTheme.of(context).secondary,
                 FlutterFlowTheme.of(context).secondary,
               ),
               FlutterFlowTheme.of(context).primary
             ],
-            stops: const [0.0, 1.0],
-            begin: const AlignmentDirectional(0.0, -1.0),
-            end: const AlignmentDirectional(0, 1.0),
+            stops: [0.0, 1.0],
+            begin: AlignmentDirectional(0.0, -1.0),
+            end: AlignmentDirectional(0, 1.0),
           ),
           borderRadius: BorderRadius.circular(50.0),
         ),
         child: Align(
-          alignment: const AlignmentDirectional(0.0, 0.0),
+          alignment: AlignmentDirectional(0.0, 0.0),
           child: Text(
             valueOrDefault<String>(
-              widget.title,
+              widget!.title,
               'na',
             ),
             style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -85,6 +81,12 @@ class _CustomButtonWidgetState extends State<CustomButtonWidget> {
           ),
         ),
       ),
+      onEnter: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = true);
+      }),
+      onExit: ((event) async {
+        safeSetState(() => _model.mouseRegionHovered = false);
+      }),
     );
   }
 }

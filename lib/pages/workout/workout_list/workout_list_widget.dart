@@ -1,7 +1,10 @@
 import '/components/strength_card/strength_card_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'workout_list_model.dart';
 export 'workout_list_model.dart';
 
@@ -48,13 +51,13 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                   children: [
                     Container(
                       height: 240.0,
-                      decoration: const BoxDecoration(),
+                      decoration: BoxDecoration(),
                       child: Stack(
                         children: [
                           ClipRRect(
                             child: Container(
                               height: 420.0,
-                              decoration: const BoxDecoration(),
+                              decoration: BoxDecoration(),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [
@@ -74,7 +77,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                           blurRadius: 40.0,
                                           color: FlutterFlowTheme.of(context)
                                               .primaryBackground2,
-                                          offset: const Offset(
+                                          offset: Offset(
                                             0.0,
                                             2.0,
                                           ),
@@ -88,9 +91,9 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(-1.0, 1.0),
+                            alignment: AlignmentDirectional(-1.0, 1.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   16.0, 0.0, 0.0, 0.0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.min,
@@ -122,7 +125,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                           fontWeight: FontWeight.normal,
                                         ),
                                   ),
-                                ].divide(const SizedBox(height: 16.0)),
+                                ].divide(SizedBox(height: 16.0)),
                               ),
                             ),
                           ),
@@ -131,14 +134,14 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           wrapWithModel(
                             model: _model.strengthCardModel1,
                             updateCallback: () => safeSetState(() {}),
-                            child: const StrengthCardWidget(
+                            child: StrengthCardWidget(
                               cover:
                                   'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/a0fxcqbchgt4/i29.jpg',
                               title: 'Full Body',
@@ -172,7 +175,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel2,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/xw1h9bd2z3j1/i30.jpg',
                                         title: 'Insane Six Pack',
@@ -189,7 +192,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel3,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/cex7wyc1n0ze/i31.jpg',
                                         title: 'Complex Core',
@@ -206,7 +209,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel4,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/367cj7b3l3nb/i37.jpg',
                                         title: 'Strong Back',
@@ -215,7 +218,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                   ],
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 12.0)),
+                            ].divide(SizedBox(height: 12.0)),
                           ),
                           Column(
                             mainAxisSize: MainAxisSize.max,
@@ -245,7 +248,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel5,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/zdqg9eba8drq/i35.jpg',
                                         title: 'Complex Lower body',
@@ -262,7 +265,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel6,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/23vtq6w979qa/i34.jpg',
                                         title: 'Exlosive Power jumps',
@@ -279,7 +282,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel7,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/nxc7rjnew9zx/i33.jpg',
                                         title: 'Amazing Butt',
@@ -288,7 +291,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                   ],
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 12.0)),
+                            ].divide(SizedBox(height: 12.0)),
                           ),
                           Column(
                             mainAxisSize: MainAxisSize.max,
@@ -318,7 +321,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel8,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/x6giwj5sopsz/i28.jpg',
                                         title: 'Complex Upper Body',
@@ -335,7 +338,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel9,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/3asbi75osmqz/i36.jpg',
                                         title: 'Chest & Arms',
@@ -352,7 +355,7 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                     wrapWithModel(
                                       model: _model.strengthCardModel10,
                                       updateCallback: () => safeSetState(() {}),
-                                      child: const StrengthCardWidget(
+                                      child: StrengthCardWidget(
                                         cover:
                                             'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/sk7ps2t6z3jx/i38.jpg',
                                         title: 'Shoulders & Upper Back',
@@ -361,18 +364,18 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                                   ],
                                 ),
                               ),
-                            ].divide(const SizedBox(height: 12.0)),
+                            ].divide(SizedBox(height: 12.0)),
                           ),
                         ]
-                            .divide(const SizedBox(height: 24.0))
-                            .addToEnd(const SizedBox(height: 32.0)),
+                            .divide(SizedBox(height: 24.0))
+                            .addToEnd(SizedBox(height: 32.0)),
                       ),
                     ),
-                  ].divide(const SizedBox(height: 24.0)),
+                  ].divide(SizedBox(height: 24.0)),
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 16.0, 0.0, 0.0),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -384,12 +387,12 @@ class _WorkoutListWidgetState extends State<WorkoutListWidget> {
                   child: Container(
                     width: 32.0,
                     height: 32.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0x67BDBDBD),
                       shape: BoxShape.circle,
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.0, 0.0),
                       child: Icon(
                         FFIcons.kchevronLeft,
                         color: FlutterFlowTheme.of(context).info,

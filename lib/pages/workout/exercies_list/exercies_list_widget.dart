@@ -3,7 +3,10 @@ import '/components/settings_card/settings_card_widget.dart';
 import '/components/settings_card2/settings_card2_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'exercies_list_model.dart';
 export 'exercies_list_model.dart';
 
@@ -53,7 +56,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -72,7 +75,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                   wrapWithModel(
                                     model: _model.exerciseCard2Model1,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const ExerciseCard2Widget(
+                                    child: ExerciseCard2Widget(
                                       icon:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/2zydwka1l8ol/c18.png',
                                       title: 'Abs & Core',
@@ -89,7 +92,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                   wrapWithModel(
                                     model: _model.exerciseCard2Model2,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const ExerciseCard2Widget(
+                                    child: ExerciseCard2Widget(
                                       icon:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/kff26yapljtu/c19.png',
                                       title: 'Upper Body',
@@ -106,7 +109,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                   wrapWithModel(
                                     model: _model.exerciseCard2Model3,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const ExerciseCard2Widget(
+                                    child: ExerciseCard2Widget(
                                       icon:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/6h3371zvn4j9/c20.png',
                                       title: 'Lower Body',
@@ -123,7 +126,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                   wrapWithModel(
                                     model: _model.exerciseCard2Model4,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const ExerciseCard2Widget(
+                                    child: ExerciseCard2Widget(
                                       icon:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/sbtpbtszf6nt/c21.png',
                                       title: 'Cardio',
@@ -140,7 +143,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                   wrapWithModel(
                                     model: _model.exerciseCard2Model5,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const ExerciseCard2Widget(
+                                    child: ExerciseCard2Widget(
                                       icon:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/atx1e2b8rqjn/c22.png',
                                       title: 'Stretching',
@@ -157,7 +160,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                   wrapWithModel(
                                     model: _model.exerciseCard2Model6,
                                     updateCallback: () => safeSetState(() {}),
-                                    child: const ExerciseCard2Widget(
+                                    child: ExerciseCard2Widget(
                                       icon:
                                           'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/gc2nlkdkjtn9/c23.png',
                                       title: 'Yoga',
@@ -167,17 +170,17 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                               ),
                             ),
                           ),
-                        ].divide(const SizedBox(height: 8.0)),
+                        ].divide(SizedBox(height: 8.0)),
                       ),
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(16.0, 24.0, 16.0, 0.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 8.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -220,7 +223,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                       context.pushNamed(
                                         'FitnessList',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -253,7 +256,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                       context.pushNamed(
                                         'FitnessList',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -286,7 +289,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                       context.pushNamed(
                                         'FitnessList',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -319,7 +322,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                       context.pushNamed(
                                         'FitnessList',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -352,7 +355,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                                       context.pushNamed(
                                         'FitnessList',
                                         extra: <String, dynamic>{
-                                          kTransitionInfoKey: const TransitionInfo(
+                                          kTransitionInfoKey: TransitionInfo(
                                             hasTransition: true,
                                             transitionType:
                                                 PageTransitionType.rightToLeft,
@@ -381,7 +384,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 12.0, 0.0, 0.0),
                             child: wrapWithModel(
                               model: _model.settingsCard2Model2,
@@ -396,12 +399,12 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                               ),
                             ),
                           ),
-                        ].divide(const SizedBox(height: 8.0)),
+                        ].divide(SizedBox(height: 8.0)),
                       ),
                     ),
                   ]
-                      .addToStart(const SizedBox(height: 120.0))
-                      .addToEnd(const SizedBox(height: 32.0)),
+                      .addToStart(SizedBox(height: 120.0))
+                      .addToEnd(SizedBox(height: 32.0)),
                 ),
               ),
               Container(
@@ -412,7 +415,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                     BoxShadow(
                       blurRadius: 8.0,
                       color: FlutterFlowTheme.of(context).primaryBackground2,
-                      offset: const Offset(
+                      offset: Offset(
                         0.0,
                         2.0,
                       ),
@@ -421,7 +424,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
@@ -440,12 +443,12 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kchevronLeft,
                                   color: FlutterFlowTheme.of(context).info,
@@ -475,7 +478,7 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                               context.pushNamed(
                                 'FilterWorkouts',
                                 extra: <String, dynamic>{
-                                  kTransitionInfoKey: const TransitionInfo(
+                                  kTransitionInfoKey: TransitionInfo(
                                     hasTransition: true,
                                     transitionType:
                                         PageTransitionType.rightToLeft,
@@ -487,12 +490,12 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                             child: Container(
                               width: 32.0,
                               height: 32.0,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 color: Color(0x67BDBDBD),
                                 shape: BoxShape.circle,
                               ),
                               child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.0, 0.0),
                                 child: Icon(
                                   FFIcons.kfilter,
                                   color: FlutterFlowTheme.of(context).info,
@@ -537,8 +540,8 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                               errorBorder: InputBorder.none,
                               focusedErrorBorder: InputBorder.none,
                               filled: true,
-                              fillColor: const Color(0xFF052146),
-                              contentPadding: const EdgeInsetsDirectional.fromSTEB(
+                              fillColor: Color(0xFF052146),
+                              contentPadding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 12.0, 12.0, 12.0),
                               prefixIcon: Icon(
                                 FFIcons.ksearch,
@@ -559,8 +562,8 @@ class _ExerciesListWidgetState extends State<ExerciesListWidget> {
                         ),
                       ),
                     ]
-                        .divide(const SizedBox(height: 20.0))
-                        .addToEnd(const SizedBox(height: 6.0)),
+                        .divide(SizedBox(height: 20.0))
+                        .addToEnd(SizedBox(height: 6.0)),
                   ),
                 ),
               ),

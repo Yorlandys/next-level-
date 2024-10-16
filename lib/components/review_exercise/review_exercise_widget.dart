@@ -2,6 +2,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_toggle_icon.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'review_exercise_model.dart';
 export 'review_exercise_model.dart';
 
@@ -46,7 +48,7 @@ class _ReviewExerciseWidgetState extends State<ReviewExerciseWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(),
+      decoration: BoxDecoration(),
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,7 +59,7 @@ class _ReviewExerciseWidgetState extends State<ReviewExerciseWidget> {
               ClipRRect(
                 borderRadius: BorderRadius.circular(10.0),
                 child: Image.network(
-                  widget.cover!,
+                  widget!.cover!,
                   width: 66.0,
                   height: 52.0,
                   fit: BoxFit.cover,
@@ -65,7 +67,7 @@ class _ReviewExerciseWidgetState extends State<ReviewExerciseWidget> {
               ),
               Text(
                 valueOrDefault<String>(
-                  widget.title,
+                  widget!.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -76,7 +78,7 @@ class _ReviewExerciseWidgetState extends State<ReviewExerciseWidget> {
                       fontWeight: FontWeight.w500,
                     ),
               ),
-            ].divide(const SizedBox(width: 14.0)),
+            ].divide(SizedBox(width: 14.0)),
           ),
           Row(
             mainAxisSize: MainAxisSize.max,
@@ -121,9 +123,9 @@ class _ReviewExerciseWidgetState extends State<ReviewExerciseWidget> {
                   size: 22.0,
                 ),
               ),
-            ].divide(const SizedBox(width: 8.0)).addToEnd(const SizedBox(width: 4.0)),
+            ].divide(SizedBox(width: 8.0)).addToEnd(SizedBox(width: 4.0)),
           ),
-        ].divide(const SizedBox(width: 12.0)),
+        ].divide(SizedBox(width: 12.0)),
       ),
     );
   }

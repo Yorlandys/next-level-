@@ -1,6 +1,8 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'filters_model.dart';
 export 'filters_model.dart';
 
@@ -61,13 +63,13 @@ class _FiltersWidgetState extends State<FiltersWidget> {
           borderRadius: BorderRadius.circular(50.0),
         ),
         child: Padding(
-          padding: const EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
+          padding: EdgeInsetsDirectional.fromSTEB(12.0, 0.0, 12.0, 0.0),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 valueOrDefault<String>(
-                  widget.title,
+                  widget!.title,
                   'na',
                 ),
                 style: FlutterFlowTheme.of(context).bodyMedium.override(

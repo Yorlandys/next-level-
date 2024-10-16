@@ -2,6 +2,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'user_review_model.dart';
 export 'user_review_model.dart';
 
@@ -48,7 +50,7 @@ class _UserReviewWidgetState extends State<UserReviewWidget> {
       height: 150.0,
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).secondaryBackground,
-        boxShadow: const [
+        boxShadow: [
           BoxShadow(
             blurRadius: 6.0,
             color: Color(0x07000000),
@@ -65,14 +67,14 @@ class _UserReviewWidgetState extends State<UserReviewWidget> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(14.0),
+        padding: EdgeInsets.all(14.0),
         child: Column(
           mainAxisSize: MainAxisSize.max,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               valueOrDefault<String>(
-                widget.name,
+                widget!.name,
                 'na',
               ),
               style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -97,7 +99,7 @@ class _UserReviewWidgetState extends State<UserReviewWidget> {
             ),
             Text(
               valueOrDefault<String>(
-                widget.comment,
+                widget!.comment,
                 'na',
               ),
               maxLines: 5,
@@ -107,7 +109,7 @@ class _UserReviewWidgetState extends State<UserReviewWidget> {
                     letterSpacing: 0.0,
                   ),
             ),
-          ].divide(const SizedBox(height: 2.0)),
+          ].divide(SizedBox(height: 2.0)),
         ),
       ),
     );

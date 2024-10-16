@@ -1,9 +1,14 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'creating_plan_model.dart';
 export 'creating_plan_model.dart';
 
@@ -35,8 +40,8 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
             curve: Curves.easeInOut,
             delay: 700.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -54,8 +59,8 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
             curve: Curves.easeInOut,
             delay: 700.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 200.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 200.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -86,7 +91,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -132,7 +137,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                   children: [
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
                       child: Text(
                         'Do you usually feel tired\naround lunch time?',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -146,7 +151,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                       child: InkWell(
                         splashColor: Colors.transparent,
                         focusColor: Colors.transparent,
@@ -182,7 +187,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                               ),
                             ),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   12.0, 0.0, 0.0, 0.0),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -202,7 +207,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                                   ),
                                   if (_model.selectedOption == 'Yes')
                                     Padding(
-                                      padding: const EdgeInsetsDirectional.fromSTEB(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
                                           0.0, 0.0, 16.0, 0.0),
                                       child: Container(
                                         width: 24.0,
@@ -214,7 +219,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                                         ),
                                         child: Align(
                                           alignment:
-                                              const AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.0, 0.0),
                                           child: Icon(
                                             FFIcons.kcheck,
                                             color: FlutterFlowTheme.of(context)
@@ -267,7 +272,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                             ),
                           ),
                           child: Padding(
-                            padding: const EdgeInsetsDirectional.fromSTEB(
+                            padding: EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -286,7 +291,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                                 ),
                                 if (_model.selectedOption == 'No')
                                   Padding(
-                                    padding: const EdgeInsetsDirectional.fromSTEB(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 16.0, 0.0),
                                     child: Container(
                                       width: 24.0,
@@ -298,7 +303,7 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                                       ),
                                       child: Align(
                                         alignment:
-                                            const AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.0, 0.0),
                                         child: Icon(
                                           FFIcons.kcheck,
                                           color:
@@ -316,14 +321,14 @@ class _CreatingPlanWidgetState extends State<CreatingPlanWidget>
                     ).animateOnPageLoad(
                         animationsMap['containerOnPageLoadAnimation2']!),
                   ]
-                      .divide(const SizedBox(height: 12.0))
-                      .addToStart(const SizedBox(height: 28.0))
-                      .addToEnd(const SizedBox(height: 24.0)),
+                      .divide(SizedBox(height: 12.0))
+                      .addToStart(SizedBox(height: 28.0))
+                      .addToEnd(SizedBox(height: 24.0)),
                 ),
               ]
-                  .divide(const SizedBox(height: 60.0))
-                  .addToStart(const SizedBox(height: 24.0))
-                  .addToEnd(const SizedBox(height: 24.0)),
+                  .divide(SizedBox(height: 60.0))
+                  .addToStart(SizedBox(height: 24.0))
+                  .addToEnd(SizedBox(height: 24.0)),
             ),
           ),
         ),

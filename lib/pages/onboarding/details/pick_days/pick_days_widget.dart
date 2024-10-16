@@ -3,9 +3,13 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:provider/provider.dart';
 import 'pick_days_model.dart';
 export 'pick_days_model.dart';
 
@@ -38,8 +42,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOutQuint,
             delay: 0.0.ms,
             duration: 600.0.ms,
-            begin: const Offset(-300.0, 0.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(-300.0, 0.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -57,8 +61,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -76,8 +80,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -95,8 +99,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -114,8 +118,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -133,8 +137,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -152,8 +156,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -171,8 +175,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
             curve: Curves.easeInOut,
             delay: 200.0.ms,
             duration: 400.0.ms,
-            begin: const Offset(0.0, 100.0),
-            end: const Offset(0.0, 0.0),
+            begin: Offset(0.0, 100.0),
+            end: Offset(0.0, 0.0),
           ),
           FadeEffect(
             curve: Curves.easeInOut,
@@ -203,7 +207,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
         body: SafeArea(
           top: true,
           child: Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
+            padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
             child: Column(
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -228,7 +232,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                           shape: BoxShape.circle,
                         ),
                         child: Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Icon(
                             FFIcons.kchevronLeft,
                             color: FlutterFlowTheme.of(context).primaryText,
@@ -249,7 +253,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -265,11 +269,11 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             ),
                       ).animateOnPageLoad(
                           animationsMap['textOnPageLoadAnimation']!),
-                    ].divide(const SizedBox(height: 6.0)),
+                    ].divide(SizedBox(height: 6.0)),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 50.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 50.0),
                   child: Text(
                     'Great! Baset on your dataa, we recommend4\nworkouts per week.',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -291,7 +295,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             child: wrapWithModel(
                               model: _model.dayCardModel1,
                               updateCallback: () => safeSetState(() {}),
-                              child: const DayCardWidget(
+                              child: DayCardWidget(
                                 title: 'Sun',
                               ),
                             ).animateOnPageLoad(
@@ -301,7 +305,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             child: wrapWithModel(
                               model: _model.dayCardModel2,
                               updateCallback: () => safeSetState(() {}),
-                              child: const DayCardWidget(
+                              child: DayCardWidget(
                                 title: 'Mon',
                               ),
                             ).animateOnPageLoad(
@@ -311,7 +315,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             child: wrapWithModel(
                               model: _model.dayCardModel3,
                               updateCallback: () => safeSetState(() {}),
-                              child: const DayCardWidget(
+                              child: DayCardWidget(
                                 title: 'Tue',
                               ),
                             ).animateOnPageLoad(
@@ -321,13 +325,13 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             child: wrapWithModel(
                               model: _model.dayCardModel4,
                               updateCallback: () => safeSetState(() {}),
-                              child: const DayCardWidget(
+                              child: DayCardWidget(
                                 title: 'Wed',
                               ),
                             ).animateOnPageLoad(
                                 animationsMap['dayCardOnPageLoadAnimation4']!),
                           ),
-                        ].divide(const SizedBox(width: 6.0)),
+                        ].divide(SizedBox(width: 6.0)),
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -336,7 +340,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             child: wrapWithModel(
                               model: _model.dayCardModel5,
                               updateCallback: () => safeSetState(() {}),
-                              child: const DayCardWidget(
+                              child: DayCardWidget(
                                 title: 'Thu',
                               ),
                             ).animateOnPageLoad(
@@ -346,7 +350,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             child: wrapWithModel(
                               model: _model.dayCardModel6,
                               updateCallback: () => safeSetState(() {}),
-                              child: const DayCardWidget(
+                              child: DayCardWidget(
                                 title: 'Fri',
                               ),
                             ).animateOnPageLoad(
@@ -356,20 +360,20 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                             child: wrapWithModel(
                               model: _model.dayCardModel7,
                               updateCallback: () => safeSetState(() {}),
-                              child: const DayCardWidget(
+                              child: DayCardWidget(
                                 title: 'Sat',
                               ),
                             ).animateOnPageLoad(
                                 animationsMap['dayCardOnPageLoadAnimation7']!),
                           ),
                         ]
-                            .divide(const SizedBox(width: 6.0))
-                            .addToStart(const SizedBox(width: 36.0))
-                            .addToEnd(const SizedBox(width: 36.0)),
+                            .divide(SizedBox(width: 6.0))
+                            .addToStart(SizedBox(width: 36.0))
+                            .addToEnd(SizedBox(width: 36.0)),
                       ),
                       Expanded(
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 24.0),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
@@ -384,7 +388,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                                   borderRadius: BorderRadius.circular(10.0),
                                 ),
                                 child: Padding(
-                                  padding: const EdgeInsets.all(12.0),
+                                  padding: EdgeInsets.all(12.0),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -426,14 +430,14 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                                                         letterSpacing: 0.0,
                                                       ),
                                             ),
-                                          ].divide(const SizedBox(height: 4.0)),
+                                          ].divide(SizedBox(height: 4.0)),
                                         ),
                                       ),
                                       Switch.adaptive(
                                         value: _model.switchValue!,
                                         onChanged: (newValue) async {
                                           safeSetState(() =>
-                                              _model.switchValue = newValue);
+                                              _model.switchValue = newValue!);
                                         },
                                         activeColor:
                                             FlutterFlowTheme.of(context).info,
@@ -446,7 +450,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                                         inactiveThumbColor:
                                             FlutterFlowTheme.of(context).info,
                                       ),
-                                    ].divide(const SizedBox(width: 20.0)),
+                                    ].divide(SizedBox(width: 20.0)),
                                   ),
                                 ),
                               ),
@@ -454,17 +458,17 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                           ),
                         ),
                       ),
-                    ].divide(const SizedBox(height: 6.0)),
+                    ].divide(SizedBox(height: 6.0)),
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 1.0),
+                  alignment: AlignmentDirectional(0.0, 1.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed(
                         'HearFitify',
                         extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
+                          kTransitionInfoKey: TransitionInfo(
                             hasTransition: true,
                             transitionType: PageTransitionType.rightToLeft,
                             duration: Duration(milliseconds: 200),
@@ -477,9 +481,9 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                       width: double.infinity,
                       height: 44.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: FlutterFlowTheme.of(context).primary,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
@@ -490,7 +494,7 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                                 fontWeight: FontWeight.bold,
                               ),
                       elevation: 0.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Colors.transparent,
                         width: 1.0,
                       ),
@@ -499,8 +503,8 @@ class _PickDaysWidgetState extends State<PickDaysWidget>
                   ),
                 ),
               ]
-                  .addToStart(const SizedBox(height: 24.0))
-                  .addToEnd(const SizedBox(height: 24.0)),
+                  .addToStart(SizedBox(height: 24.0))
+                  .addToEnd(SizedBox(height: 24.0)),
             ),
           ),
         ),
