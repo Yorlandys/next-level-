@@ -383,7 +383,7 @@ class _AchievementsWidgetState extends State<AchievementsWidget> {
                                 ),
                               ],
                               carouselController: _model.carouselController ??=
-                                  CarouselController(),
+                                  CarouselSliderController(),
                               options: CarouselOptions(
                                 initialPage: 1,
                                 viewportFraction: 0.2,

@@ -13,7 +13,7 @@ class AchievementsModel extends FlutterFlowModel<AchievementsWidget> {
   ///  State fields for stateful widgets in this page.
 
   // State field(s) for Carousel widget.
-  CarouselController? carouselController;
+  CarouselSliderController? carouselController;
   int carouselCurrentIndex = 1;
 
   @override

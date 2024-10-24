@@ -177,31 +177,13 @@ class _LogInAccountWidgetState extends State<LogInAccountWidget>
                       ),
                 ),
               ),
-              InkWell(
-                splashColor: Colors.transparent,
-                focusColor: Colors.transparent,
-                hoverColor: Colors.transparent,
-                highlightColor: Colors.transparent,
-                onTap: () async {
-                  context.pushNamed(
-                    'Subscription',
-                    extra: <String, dynamic>{
-                      kTransitionInfoKey: TransitionInfo(
-                        hasTransition: true,
-                        transitionType: PageTransitionType.rightToLeft,
-                        duration: Duration(milliseconds: 200),
-                      ),
-                    },
-                  );
-                },
-                child: wrapWithModel(
-                  model: _model.loginButtonModel1,
-                  updateCallback: () => safeSetState(() {}),
-                  child: LoginButtonWidget(
-                    logo:
-                        'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/grpevtjsvuel/Google__G__logo(1).svg.png',
-                    title: 'Continue with Google',
-                  ),
+              wrapWithModel(
+                model: _model.loginButtonModel1,
+                updateCallback: () => safeSetState(() {}),
+                child: LoginButtonWidget(
+                  logo:
+                      'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/fiti-plus-qvr2h3/assets/grpevtjsvuel/Google__G__logo(1).svg.png',
+                  title: 'Continue with Google',
                 ),
               ).animateOnPageLoad(
                   animationsMap['loginButtonOnPageLoadAnimation1']!),

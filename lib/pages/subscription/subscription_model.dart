@@ -1,8 +1,10 @@
 import '/components/result/result_widget.dart';
+import '/components/revenue_cat_subsription_paywall_widget.dart';
 import '/components/user_review/user_review_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/revenue_cat_util.dart' as revenue_cat;
 import 'subscription_widget.dart' show SubscriptionWidget;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';

@@ -266,7 +266,7 @@ class _SetDurationWidgetState extends State<SetDurationWidget> {
                           ),
                         ],
                         carouselController: _model.carouselController ??=
-                            CarouselController(),
+                            CarouselSliderController(),
                         options: CarouselOptions(
                           initialPage: 1,
                           viewportFraction: 0.34,

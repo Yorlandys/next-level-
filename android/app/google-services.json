@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "239946596213",
+    "project_id": "next-level-b2bojf",
+    "storage_bucket": "next-level-b2bojf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239946596213:android:d287973abacbc0847c1d3c",
+        "android_client_info": {
+          "package_name": "com.nextlevel.fitnes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDY1wh_zN3nVlRavwjtjZny6t5gnOGbTSw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

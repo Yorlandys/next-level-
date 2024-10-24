@@ -1,8 +1,10 @@
 import '/components/result/result_widget.dart';
+import '/components/revenue_cat_subsription_paywall_widget.dart';
 import '/components/user_review/user_review_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/flutter_flow/revenue_cat_util.dart' as revenue_cat;
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -200,7 +202,15 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 2.0, 0.0, 0.0),
                                         child: Text(
-                                          '₹227.59 \nper week',
+                                          valueOrDefault<String>(
+                                            revenue_cat
+                                                .offerings!
+                                                .current!
+                                                .weekly!
+                                                .storeProduct
+                                                .priceString,
+                                            '0',
+                                          ),
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
@@ -225,7 +235,11 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                                         ),
                                       ),
                                       Text(
-                                        '₹990',
+                                        valueOrDefault<String>(
+                                          revenue_cat.offerings!.current!
+                                              .weekly!.storeProduct.priceString,
+                                          '0',
+                                        ),
                                         style: FlutterFlowTheme.of(context)
                                             .bodyMedium
                                             .override(
@@ -1657,8 +1671,46 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                     padding:
                         EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 20.0, 8.0),
                     child: FFButtonWidget(
-                      onPressed: () {
-                        print('Button pressed ...');
+                      onPressed: () async {
+                        final isEntitled =
+                            await revenue_cat.isEntitled('usuario premium') ??
+                                false;
+                        if (!isEntitled) {
+                          await revenue_cat.loadOfferings();
+                        }
+
+                        if (isEntitled) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text(
+                                'welcome,subscriber!',
+                                style: TextStyle(
+                                  color:
+                                      FlutterFlowTheme.of(context).primaryText,
+                                ),
+                              ),
+                              duration: Duration(milliseconds: 4000),
+                              backgroundColor:
+                                  FlutterFlowTheme.of(context).secondary,
+                            ),
+                          );
+                        } else {
+                          await showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            enableDrag: false,
+                            context: context,
+                            builder: (context) {
+                              return GestureDetector(
+                                onTap: () => FocusScope.of(context).unfocus(),
+                                child: Padding(
+                                  padding: MediaQuery.viewInsetsOf(context),
+                                  child: RevenueCatSubsriptionPaywallWidget(),
+                                ),
+                              );
+                            },
+                          ).then((value) => safeSetState(() {}));
+                        }
                       },
                       text: 'Get Started',
                       options: FFButtonOptions(
